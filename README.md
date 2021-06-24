@@ -4,8 +4,15 @@
 
 <h4 align="center"><i>Personal dotfiles for Arch Linux.</i></h4>
 
+- [Features](#features)
 - [Information](#information)
 - [Quickstart](#quickstart)
+- [Inspiration](#inspiration)
+
+## Features
+
+- Syntax Highlighting
+- Fish-like Autosuggestions
 
 ## Information
 
@@ -28,3 +35,9 @@ $ cd ~/dotfiles                                       # cd to newly cloned direc
 $ stow -t ~ stow --verbose --dotfiles                 # Setup GNU Stow
 $ make
 ```
+
+## Inspiration
+
+- [Kraymer/F-dotfiles](https://github.com/Kraymer/F-dotfiles)
+- [LukeSmithxyz/voidrice](https://github.com/LukeSmithxyz/voidrice)
+- [dwt1/dotfiles](https://gitlab.com/dwt1/dotfiles)
