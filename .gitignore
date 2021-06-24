@@ -1,0 +1,40 @@
+\.zinit
+\syntax
+\plugins
+!nnn/.config/nnn/plugins
+\sessions
+espanso/.config/espanso/user
+
+redshift.conf
+npmrc
+
+# Files that are not mine
+pip
+pip3
+pip3.9
+wheel
+
+# Backups
+*.bak
+
+# Misc.
+.DS_Store
+*.cache
+Thumbs.db
+*.log
+
+# ZSH Cache
+.zcompdump*
+*.zwc
+
+# Secrets
+redshift.env
+npm.env
+*secrets*
+
+# Git Secrets
+.gitsecret/keys/random_seed
+!*.secret
+
+# Encrypt files
+*.gpg
