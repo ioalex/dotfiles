@@ -1,0 +1,14 @@
+.DS_Store
+\.git
+\.github
+\.gitsecret
+\.gitignore
+
+README.*
+.todo
+LICENSE
+.git
+.gitignore
+.stow-local-ignore
+.*.example
+^/@.*
