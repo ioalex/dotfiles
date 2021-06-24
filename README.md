@@ -7,6 +7,7 @@
 - [Features](#features)
 - [Information](#information)
 - [Quickstart](#quickstart)
+- [Wiki](#wiki)
 - [Inspiration](#inspiration)
 
 ## Features
@@ -35,6 +36,10 @@ $ cd ~/dotfiles                                       # cd to newly cloned direc
 $ stow -t ~ stow --verbose --dotfiles                 # Setup GNU Stow
 $ make
 ```
+
+## Wiki
+
+Please see the [wiki](https://github.com/ioalex/dotfiles/wiki) for more in-depth information.
 
 ## Inspiration
 
