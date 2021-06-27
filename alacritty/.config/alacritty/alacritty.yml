@@ -40,6 +40,43 @@ window:
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
 
+  # Startup Mode (changes require restart)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  #
+  # Values for `startup_mode` (macOS only):
+  #   - SimpleFullscreen
+  # startup_mode: Maximized
+
+  # Window title
+  #title: Alacritty
+
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
+
+  # Window class (Linux/BSD only):
+  #class:
+  # Application instance name
+  #instance: Alacritty
+  # General application class
+  #general: Alacritty
+  # GTK theme variant (Linux/BSD only)
+  #
+  # Override the variant of the GTK theme. Commonly supported values are `dark`
+  # and `light`. Set this to `None` to use the default theme variant.
+  #gtk_theme_variant: None
+
+#scrolling:
+# Maximum number of lines in the scrollback buffer.
+# Specifying '0' will disable scrolling.
+#history: 10000
+
+# Scrolling distance multiplier.
+#multiplier: 3
+
 font:
   # The normal (roman) font face to use.
   normal:
