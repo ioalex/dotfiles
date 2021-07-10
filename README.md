@@ -18,8 +18,7 @@
 ## Information
 
 - **Distro**: [Arch Linux](https://archlinux.org/)
-- **Display Manager**: [LightDM](https://github.com/canonical/lightdm)
-- **Greeter**: [lightdm-gtk-greeter](https://github.com/Xubuntu/lightdm-gtk-greeter)
+- **Display Manager**: [Ly](https://github.com/nullgemm/ly)
 - **Window Manager**: [i3-gaps](https://github.com/Airblader/i3)
 - **App Launcher**: [rofi](https://github.com/davatorium/rofi)
 - **Bar**: [polybar](https://github.com/polybar/polybar)
