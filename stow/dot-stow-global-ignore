@@ -1,14 +1,22 @@
-.DS_Store
 \.git
 \.github
 \.gitsecret
 \.gitignore
+*secrets*
+*.gpg
+
+.DS_Store
+*.cache
+Thumbs.db
+*.log
 
 README.*
 .todo
 LICENSE
 .git
 .gitignore
+.gitmodules
+.editorconfig
 .stow-local-ignore
 .*.example
 ^/@.*
