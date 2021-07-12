@@ -45,3 +45,14 @@ Please see the [wiki](https://github.com/ioalex/dotfiles/wiki) for more in-depth
 - [Kraymer/F-dotfiles](https://github.com/Kraymer/F-dotfiles)
 - [LukeSmithxyz/voidrice](https://github.com/LukeSmithxyz/voidrice)
 - [dwt1/dotfiles](https://gitlab.com/dwt1/dotfiles)
+
+```text
+    .--.
+   |o_o |
+   |:_/ |
+  //   \ \
+ (|     | )
+/'\_   _/`\
+\___)=(___/
+
+```
