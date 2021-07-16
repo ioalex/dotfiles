@@ -1,0 +1,4 @@
+_sys_all_units=( ${(Q)"${(z)$(<<\EO:_sys_all_units
+'pkgfile-update.service' 'pkgfile-update.timer'
+EO:_sys_all_units
+)}"} )
