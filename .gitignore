@@ -27,6 +27,9 @@ Thumbs.db
 .zcompdump*
 *.zwc
 
+# History
+qalc.history
+
 # Secrets
 redshift.env
 npm.env
