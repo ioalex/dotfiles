@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+#
+# ~/.bash_profile
+#
+
+# env_files=(~/.config/shell/**/*.env(N))
+env_files=(~/.config/shell/**/*.env)
+for file in "${env_files[@]}"; do
+  # shellcheck source=/dev/null
+  source "$file"
+done
+
+# shellcheck disable=SC1090
+[[ -f ~/.config/bash/.bashrc ]] && . ~/.config/bash/.bashrc
+
+source /home/alex/.config/broot/launcher/bash/br
