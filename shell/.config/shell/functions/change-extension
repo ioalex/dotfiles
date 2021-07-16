@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+# Source: <https://github.com/thoughtbot/dotfiles/blob/master/zsh/functions/change-extension>
+
+# Change file extensions recursively in current directory
+#
+#   change-extension erb haml
+
+function change-extension() {
+  foreach f (**/*.$1)
+    mv $f $f:r.$2
+  end
+}

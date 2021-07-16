@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+
+# Delete all .DS_Store in current directory including child directories
+# Useful for MacOS
+dsdel() {
+  find . -name '.DS_Store' -delete;
+  echo "\u2713: .DS_Store files have been deleted!"
+}

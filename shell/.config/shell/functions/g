@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+# Source: <https://github.com/thoughtbot/dotfiles/blob/master/zsh/functions/g>
+
+# No arguments: `git status`
+# With arguments: acts like `git`
+
+g() {
+  if [[ $# -gt 0 ]]; then
+    git "$@"
+  else
+    git status
+  fi
+}

@@ -1,0 +1,217 @@
+# shellcheck shell=bash
+# shellcheck disable=SC2139
+
+# Global Aliases
+alias -g G="| grep"
+alias -g L="| less"
+
+# Use $XINITRC variable if file exists.
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
+
+# Editors
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+  mkdir="mkdir -pv" \
+  ln="ln -i" \
+	rm="rm -vI --preserve-root" \
+  trash="trash -iv" \
+  autotrash="autotrash -v" \
+  exa="exa --icons --color=auto" \
+  nnn="nnn -H" \
+  df=duf \
+  ddgr="ddgr --colorize=auto" \
+	bc="bc -ql" \
+  mount="mount | column -t" \
+  jobs="jobs -l" \
+  chown="chown -v --preserve-root" \
+  chmod="chmod -v --preserve-root" \
+  chgrp="chgrp -v --preserve-root" \
+  rsync="rsync -v" \
+  wget="wget -c"
+  # gpg="gpg --homedir ${XDG_DATA_HOME:="$HOME/.local/share"}/gnupg"
+
+# Colorize these commands when possible.
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+  c=clear \
+  rmf="\rm -rf" \
+  mkd=mkdir \
+  cpv='rsync -ah --info=progress2' \
+  h=history \
+  hs="history | rg" \
+	ka=killall \
+  q=exit \
+  open=xdg-open \
+  r=ranger \
+  nf=neofetch \
+  n=nnn \
+  ddg="ddgr --colorize=auto" \
+  fs=flameshot \
+	za="$READER" \
+  e="$EDITOR" \
+	v="$EDITOR" \
+  vi="$EDITOR" \
+  svi="sudo $EDITOR" \
+  edit="$EDITOR" \
+  code="$VISUAL" \
+  vscode="$VISUAL" \
+  m=micro \
+  1f=onefetch \
+  of=onefetch \
+  caff=caffeinate \
+  elist="export -p | most" \
+  t-e="trash-empty" \
+  t-l="trash-list" \
+  t-r="trash-restore" \
+  now='date +"%T"' \
+  nowtime=now \
+  nowdate='date +"%d/%m/%Y"' \
+  root="sudo su -" \
+  ffs="sudo !!" \
+	pman="sudo pacman" \
+  upac="yay -Syu --noconfirm" \
+  get="yay -S" \
+  plist="pacman -Qe | awk '{print $1}' > ~/dotfiles/.pacman.list" \
+  orphan="sudo pacman -Qtdq" \
+  distro="bat /etc/*-release" \
+  sha="shasum -a 256 " \
+  vpn=nordvpn \
+  st=speedtest++ \
+  speedtest=speedtest++ \
+  ping="ping -c 5" \
+  fastping="ping -c 100 -s.2" \
+  ports="netstat -tulanp" \
+  myip="curl http://ipecho.net/plain; echo" \
+  ec="$EDITOR $ZDOTDIR/.zshrc" \
+  sc=src \
+  reload!=src \
+  aedit=" $EDITOR $ZDOTDIR/.zsh/aliases.zsh; source $ZDOTDIR/.zsh/aliases.zsh" \
+  fedit=" $EDITOR $ZDOTDIR/.zsh/functions; source $ZDOTDIR/.zsh/functions/*" \
+  mem="free -m -l -t" \
+  disk="df -h" \
+  cpu="lscpu" \
+  gpu="grep -i memory /var/log/Xorg.0.log" \
+  sdn="sudo shutdown -h now" \
+  sleep="sudo systemctl suspend" \
+  zzz="sudo systemctl suspend" \
+  lck="betterlockscreen --lock dim" \
+  xbk='xbindkeys -f "$HOME/.config/xbindkeys/config"'
+
+# For commands that are too ambiguous or for ease of remembering
+alias \
+  duckduckgo="ddgr --colorize=auto" \
+  mnt="\mount | \grep -E ^/dev | column -t" \
+  path="echo -e ${PATH//:/\\n}" \
+  wtf=apropos
+
+# Replace applications for common commands
+alias \
+  cat=bat \
+  please=sudo \
+  pls=sudo \
+  git=hub \
+  nano=micro \
+  rn=rename \
+  find=fd \
+  sed=sd \
+  tree=tre \
+  du="sudo dust" \
+  ncdu=du \
+  top=htop \
+  ps=procs \
+  grep="rg"\
+  egrep="grep --color=auto" \
+  fgrep="fgrep --color=auto"
+
+# Navigation
+alias \
+  ..="cd ..; ls" \
+  ...="cd ../..; ls" \
+  ....="cd ../../..; ls" \
+  cd..='..' \
+  cd...='...' \
+  cd....='....' \
+  ls="exa -Fa --icons --color=auto --group-directories-first --git" \
+  ld="exa -F --icons --color=auto --group-directories-first --git" \
+  la="exa -Fal --icons --color=auto --group-directories-first --git" \
+  ll="exa -Fal --icons --color=auto --group-directories-first --git" \
+  lt="\ls --human-readable --size -1 -S --classify -a --color=auto" \
+  l.='exa -a | egrep "^\."' \
+  trees=br
+
+# Directory Shortcuts
+alias \
+  dotfiles="cd $DOTFILES" \
+  projects="cd $XDG_PROJECTS_DIR" \
+  p="cd $XDG_PROJECTS_DIR"
+
+# Application Specific
+# Git
+alias \
+  gaa="git add all" \
+  gb="git branch" \
+  gcb="git checkout -b" \
+  gcm="git checkout master" \
+  gdca="git diff --cached" \
+  gf="git fetch" \
+  gm="git merge" \
+  gp="git push" \
+  gpp="git pull" \
+  glog="git log --oneline --decorate --graph" \
+  lg=lazygit
+
+# gb # Lists all git branches in current repository
+# gcb # Create new branch
+# gcm # Return to master/main branch
+# gdca # diff files that have been staged for commit
+# glog # Pretty git branch graph
+
+# Tmux
+alias \
+  tmux="tmux -f $TMUX_CONFIG" \
+  tr="tmux source $TMUX_CONFIG" \
+  t="tmux attach || tmux new-session\; split-window -h" \
+  tl="tmux list-sessions" \
+  tn="tmux new -s" \
+  ta="tmux attach -t" \
+  tk="tmux kill-session -t" \
+  tkk="tmux kill-server"
+
+# t  # Attaches tmux to the last session; creates a new session (with a panel split into left and right) if none exists.
+# tl # Lists all ongoing sessions
+
+# NPM & Yarn
+alias \
+  np=npm \
+  n0="npm outdated" \
+  npmg="npm list -g --depth=0" \
+  npml="npm list --depth=0" \
+  y=yarn
+
+# npmg # Lists globally installed npm packages
+# npml # Lists locally installed npm packages
+
+# Security
+# ClamAV - Antivirus
+# <https://www.clamav.net/documents/scanning>
+alias \
+  avscan="clamscan --recursive=yes --infected /home" \
+  avupdate="sudo freshclam"
+
+# Misc.
+eval "$(thefuck --alias fuck)"
+alias FUCK=fuck # For Mondays!
+alias fk=fuck
+
+# Suffix Aliases
+alias -s {md,cs,ts,js,json,css,html}=codium

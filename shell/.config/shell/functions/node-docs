@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# shellcheck shell=bash
+# Source: <https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node>
+
+function node-docs {
+  local section=${1:-all}
+  xdg-open "https://nodejs.org/docs/$(node --version)/api/$section.html"
+}
