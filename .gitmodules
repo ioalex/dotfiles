@@ -1,6 +1,9 @@
 [submodule "scripts"]
 	path = scripts
-	url = https://github.com/ioalex/scripts.git
-[submodule "nvim"]
-	path = nvim
-	url = https://github.com/ioalex/nvim.git
+	url = git://github.com/ioalex/scripts.git
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = git://github.com/ioalex/nvim.git
+[submodule "wallpapers/Pictures/Wallpapers"]
+	path = wallpapers/Pictures/Wallpapers
+	url = https://github.com/ioalex/Wallpapers.git
