@@ -86,8 +86,6 @@ alias \
   distro="bat /etc/*-release" \
   sha="shasum -a 256 " \
   vpn=nordvpn \
-  st=speedtest++ \
-  speedtest=speedtest++ \
   ping="ping -c 5" \
   fastping="ping -c 100 -s.2" \
   ports="netstat -tulanp" \
@@ -132,6 +130,17 @@ alias \
   grep="rg"\
   egrep="grep --color=auto" \
   fgrep="fgrep --color=auto"
+
+# Platform specific
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	alias \
+		st=speedtest++ \
+  		speedtest=speedtest++
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+        alias \
+		st=speedtest-cli \
+		speedtest=speedtest-cli
+fi
 
 # Navigation
 alias \
