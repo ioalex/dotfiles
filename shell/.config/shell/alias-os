@@ -1,0 +1,19 @@
+# Platform-specific aliases
+
+UNAMECHECK=$(uname -r);
+
+if [[ $UNAMECHECK == *[mM]"icrosoft"* ]] && [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  alias \
+    st=speedtest-cli \
+    speedtest=speedtest-cli
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	alias \
+    st=speedtest++ \
+    speedtest=speedtest++
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	  alias \
+    st=speedtest-cli \
+    speedtest=speedtest-cli
+else
+	echo "No platform-specific aliases for this system."
+fi

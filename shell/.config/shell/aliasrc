@@ -131,15 +131,10 @@ alias \
   egrep="grep --color=auto" \
   fgrep="fgrep --color=auto"
 
-# Platform specific
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	alias \
-		st=speedtest++ \
-  		speedtest=speedtest++
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-        alias \
-		st=speedtest-cli \
-		speedtest=speedtest-cli
+# Source Platform-specific aliases
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias-os" ]; then
+    # shellcheck source=/dev/null
+	. "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias-os"
 fi
 
 # Navigation
