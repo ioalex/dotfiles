@@ -29,10 +29,10 @@
 ## Quickstart
 
 ```sh
-$ sudo pacman -S stow                                 # Install GNU Stow
-$ git clone https://github.com/ioalex/dotfiles.git    # Clone this git repository
-$ cd ~/dotfiles                                       # cd to newly cloned directory
-$ stow -t ~ stow --verbose --dotfiles                 # Setup GNU Stow
+$ sudo pacman -S stow                                                # Install GNU Stow
+$ git clone --recursive https://github.com/ioalex/dotfiles.git       # Clone this git repository
+$ cd ~/dotfiles                                                      # cd to newly cloned directory
+$ stow -t ~ stow --verbose --dotfiles                                # Setup GNU Stow
 $ make
 ```
 
