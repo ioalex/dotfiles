@@ -8,13 +8,14 @@ if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/path.env" ]; then
 	. "${XDG_CONFIG_HOME:-$HOME/.config}/shell/path.env"
 fi
 
-setbg &			# set desktop wallpaper
-remaps &		# remaps keys and sets key autorepeat
-numlockx    # toggle Numlock on
-# redshift &  # adjusts the color temperature of your screen according to surroundings
-autolock &  # sets a screensaver and locks the system when it timesout
-xbanish &   # hide mouse cursor when using keyboard
-dunst &			# dunst for notifications
+xrandr@archbtw &	# setup multi-head displays
+setbg &		      	# set desktop wallpaper
+remaps &	      	# remaps keys and sets key autorepeat
+numlockx          # toggle Numlock on
+# redshift &      # adjusts the color temperature of your screen according to surroundings
+autolock &        # sets a screensaver and locks the system when it timesout
+xbanish &         # hide mouse cursor when using keyboard
+dunst &			      # dunst for notifications
 
 # This line autostarts an instance of Pulseaudio that does not exit on idle.
 # This is "necessary" on Artix due to a current bug between PA and
