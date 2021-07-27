@@ -1,0 +1,62 @@
+\node_modules
+node_modules/*
+
+# Python stuff
+*.pyc
+venv/
+VENV
+*.egg-info/*
+__pycache__
+
+# Other version control stuff
+.hg
+.svn
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+
+# Log files and databases
+log/
+*.log
+*.sql
+*.sqlite
+
+# IDEs / Code Editor stuff
+.idea
+.rubymine_helpers
+.vscode
+*.vscode
+
+# Temporary files / buffers
+*.kate-swp
+*.swp
+*.swo
+*~
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
