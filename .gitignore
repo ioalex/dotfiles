@@ -8,12 +8,6 @@ espanso/.config/espanso/user
 redshift.conf
 npmrc
 
-# Files that are not mine
-pip
-pip3
-pip3.9
-wheel
-
 # Backups
 *.bak
 
@@ -22,13 +16,16 @@ wheel
 *.cache
 Thumbs.db
 *.log
+tags
+*un~
 
 # ZSH Cache
 .zcompdump*
 *.zwc
 
-# History
-qalc.history
+# History files
+*.history*
+*.*hist
 
 # Secrets
 redshift.env
