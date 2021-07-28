@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck shell=bash
+# shellcheck disable=SC2207,SC2128
 
 # Source: <https://github.com/ctaylo21/jarvis>
 
