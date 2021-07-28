@@ -1,33 +1,5 @@
-[alias]
-	# Show the user email for the current repository.
-	whoami = config user.email
-  co = checkout
-	st = status -sb
-  co = checkout
-	cm = commit -m
-  ci = commit
-  fo = fetch origin
-	ll = log --oneline
-	last = log -1 HEAD --stat
-	rv = remote -v
-	d = !git --no-pager diff
-  dt  = difftool
-	gl = config --global -l
-  aliases = config --get-regexp "alias.*"
-	se = !git rev-list --all | xargs git \\grep -F
-  search = !git rev-list --all | xargs git \\grep -F
-  m = checkout master
-  summary = "!which onefetch && onefetch; tokei"
-
-  # Clean merged branches
-  sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
-
-  # http://www.jukie.net/bart/blog/pimping-out-git-log
-  lg = log --graph --all --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)%an%Creset %C(yellow)%d%Creset'
-
-  # Removes a file from the index
-  unstage = reset HEAD --
-	project-summary = !which onefetch && onefetch
+[branch]
+  autosetupmerge = true
 
 [color]
   branch = auto
@@ -39,6 +11,9 @@
 [color "branch"]
   current = green
   remote = yellow
+
+[commit]
+	template = ~/.config/git/commitmsg
 
 [core]
 	excludesfile = ~/.config/git/ignore
@@ -57,6 +32,7 @@
 [diff]
   tool = delta
   guitool = lazygit
+  renames = copies
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -71,16 +47,20 @@
 	protocol = https
 
 [include]
-    path = ~/.config/git/user
+  path = ~/.config/git/user
+  path = ~/.config/git/aliases
 
 [init]
 	defaultBranch = main
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [pager]
   diff = delta
   log = delta
   reflog = delta
   show = delta
+
+[push]
+  default = current
