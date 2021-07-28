@@ -2,13 +2,13 @@
 \.github
 \.gitsecret
 \.gitignore
-*secrets*
-*.gpg
+# *secrets*
+# *.gpg
 
 .DS_Store
-*.cache
+# *.cache
 Thumbs.db
-*.log
+# *.log
 
 README.*
 .todo
