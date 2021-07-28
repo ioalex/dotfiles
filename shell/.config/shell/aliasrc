@@ -65,6 +65,8 @@ alias \
   edit="$EDITOR" \
   code="$VISUAL" \
   vscode="$VISUAL" \
+  code-exp="code --list-extensions | tee $HOME/dotfiles/vscode-extensions.txt" \
+  code-imp="xargs -n1 code --install-extension < $HOME/dotfiles/vscode-extensions.txt" \
   m=micro \
   1f=onefetch \
   of=onefetch \
