@@ -1,0 +1,10 @@
+# Source: <https://gist.github.com/joelpalmer/7f92a5a337097f25f6dc8eaeb831028b>
+
+# @todo make cdf ignore .local and .cache
+
+# cdf - cd into the directory of the selected file
+cdf() {
+  local file
+  local dir
+  file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
+}

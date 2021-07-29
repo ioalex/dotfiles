@@ -1,0 +1,11 @@
+# Source: <https://gist.github.com/joelpalmer/7f92a5a337097f25f6dc8eaeb831028b>
+
+# Search digital garden and open it in Neovim
+vn() {
+  local garden
+  garden=$(fd . "$HOME/Garden" | fzf)
+  if [[ -n $garden ]]
+  then
+    nvim $garden
+  fi
+}

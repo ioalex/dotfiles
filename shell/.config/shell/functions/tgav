@@ -1,0 +1,9 @@
+# Source: <https://gist.github.com/joelpalmer/7f92a5a337097f25f6dc8eaeb831028b>
+
+# Create file, add to repository and open with Neovim
+
+tgav() {
+  touch $1
+  git add $1
+  nvim $1
+}
