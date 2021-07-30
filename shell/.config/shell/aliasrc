@@ -157,8 +157,11 @@ alias \
 
 # Directory Shortcuts
 alias \
+  dots="cd $DOTFILES" \
   dotfiles="cd $DOTFILES" \
-  projects="cd $XDG_PROJECTS_DIR"
+  projects="cd $PROJECTS" \
+  garden="cd $GARDEN" \
+  notes="cd $GARDEN"
 
 # Application Specific
 # Git
