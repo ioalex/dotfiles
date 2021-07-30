@@ -37,7 +37,8 @@ if [ -z "$SHELL_CONFIG/functions" ]; then
    echo "No functions available."
 else
   for file in "$SHELL_CONFIG/functions"/*; do
-    source $file
+    # source $file
+    autoload -Uz $file
   done
 fi
 

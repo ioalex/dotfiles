@@ -1,25 +1,38 @@
 #!/usr/bin/env bash
 # shellcheck shell=bash
 
-fpath+=~/.config/zsh/.zsh/completions/_fnm
+# fpath+=~/.config/zsh/.zsh/completions/_fnm
+
+fpath=(~/.config/zsh/.zsh/completions /usr/share/zsh/site-functions $fpath)
 
 # Autocompletion
 # Enable Autocompletion
+# Completion; use cache if updated within 24h
 autoload -Uz compinit
-compinit -d "$ZSH_CACHE_DIR/zcompdump"
+if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
+  compinit -d "$XDG_CACHE_HOME/zsh/zcompdump";
+else
+  compinit -C;
+fi;
+
+# compinit -d "$ZSH_CACHE_DIR/zcompdump"
 zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
+zstyle ':completion::complete:*' cache-path "$XDG_CACHE_HOME/zsh/zcompdump"
+
+# disable zsh bundled function mtools command mcd
+# which causes a conflict.
+compdef -d mcd
 
 # Files to ignore during completion
 fignore=(DS_Store $fignore)
 
-_comp_files=($XDG_CACHE_HOME/zsh/zcompcache(Nm-20))
-if (( $#_comp_files )); then
-    compinit -i -C -d "$XDG_CACHE_HOME/zsh/zcompcache"
-else
-    compinit -i -d "$XDG_CACHE_HOME/zsh/zcompcache"
-fi
-unset _comp_files
+# _comp_files=($XDG_CACHE_HOME/zsh/zcompcache(Nm-20))
+# if (( $#_comp_files )); then
+#     compinit -i -C -d "$XDG_CACHE_HOME/zsh/zcompcache"
+# else
+#     compinit -i -d "$XDG_CACHE_HOME/zsh/zcompcache"
+# fi
+# unset _comp_files
 
 # Load complist module
 # Provides menu list for select completion results

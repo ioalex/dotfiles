@@ -111,7 +111,7 @@ alias \
 alias \
   duckduckgo="ddgr --colorize=auto" \
   mnt="\mount | \grep -E ^/dev | column -t" \
-  path="echo -e ${PATH//:/\\n}" \
+  path='echo $PATH | \tr ":" "\n"' \
   wtf=apropos
 
 # Replace applications for common commands
@@ -158,8 +158,7 @@ alias \
 # Directory Shortcuts
 alias \
   dotfiles="cd $DOTFILES" \
-  projects="cd $XDG_PROJECTS_DIR" \
-  p="cd $XDG_PROJECTS_DIR"
+  projects="cd $XDG_PROJECTS_DIR"
 
 # Application Specific
 # Git
@@ -202,6 +201,7 @@ alias \
   n0="npm outdated" \
   npmg="npm list -g --depth=0" \
   npml="npm list --depth=0" \
+  nr="npm run" \
   y=yarn
 
 # npmg # Lists globally installed npm packages

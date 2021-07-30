@@ -1,0 +1,2 @@
+#compdef wp
+_files -W $WEBDEV -/
