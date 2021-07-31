@@ -51,15 +51,21 @@ done
 
 source /home/alex/.config/broot/launcher/bash/br
 
-eval "$(hub alias -s)"
-eval "$(fnm env)"
-eval "$(zoxide init zsh)"
-
 # Plugins - managed with Zinit
 # Regular plugins loaded without investigating.
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit light mroth/evalcache
 zinit snippet OMZP::sudo
 zinit snippet OMZP::zsh_reload
+
+# eval "$(hub alias -s)"
+# eval "$(fnm env)"
+# eval "$(zoxide init zsh)"
+
+_evalcache fnm env
+_evalcache zoxide init zsh
+_evalcache thefuck --alias fuck
+_evalcache hub alias -s
