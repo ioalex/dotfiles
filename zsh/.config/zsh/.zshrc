@@ -58,8 +58,8 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 zinit light mroth/evalcache
-zinit snippet OMZP::sudo
-zinit snippet OMZP::zsh_reload
+zinit ice wait"2" lucid; zinit snippet OMZP::sudo
+zinit ice wait"2" lucid; zinit snippet OMZP::zsh_reload
 
 # Cache evals to reduce startup time
 _evalcache fnm env
