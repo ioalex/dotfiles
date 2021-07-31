@@ -49,7 +49,10 @@ do
   source $file
 done
 
-source /home/alex/.config/broot/launcher/bash/br
+if [ -f “${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br” ]; then
+    # shellcheck source=/dev/null
+	source “${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br”
+fi
 
 if [ -f “${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins.zsh” ]; then
     # shellcheck source=/dev/null
