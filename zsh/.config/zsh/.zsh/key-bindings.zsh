@@ -13,3 +13,8 @@ bindkey ";5D" backward-word
 # Source: https://jdhao.github.io/2019/06/13/zsh_bind_keys/
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
+
+# Edit line in vim with ctrl-e
+# Source: <https://youtube.com/watch?v=eLEo4OQ-cuQ>
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
