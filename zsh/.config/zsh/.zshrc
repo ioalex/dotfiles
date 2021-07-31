@@ -61,10 +61,6 @@ zinit light mroth/evalcache
 zinit snippet OMZP::sudo
 zinit snippet OMZP::zsh_reload
 
-# eval "$(hub alias -s)"
-# eval "$(fnm env)"
-# eval "$(zoxide init zsh)"
-
 _evalcache fnm env
 _evalcache zoxide init zsh
 _evalcache thefuck --alias fuck
