@@ -31,6 +31,7 @@ alias \
   chown="chown -v --preserve-root" \
   chmod="chmod -v --preserve-root" \
   chgrp="chgrp -v --preserve-root" \
+  uptime="uptime -p" \
   rsync="rsync -v" \
   wget="wget -c"
   # gpg="gpg --homedir ${XDG_DATA_HOME:="$HOME/.local/share"}/gnupg"
@@ -50,11 +51,11 @@ alias \
   h=history \
   hs="history | rg" \
 	ka=killall \
-  q=exit \
+  :q=exit \
   open=xdg-open \
   r=ranger \
   nf=neofetch \
-  n=nnn \
+  n="nnn -deo" \
   ddg="ddgr --colorize=auto" \
   fs=flameshot \
 	za="$READER" \
@@ -218,9 +219,8 @@ alias \
   avupdate="sudo freshclam"
 
 # Misc.
-eval "$(thefuck --alias fuck)"
 alias FUCK=fuck # For Mondays!
 alias fk=fuck
 
 # Suffix Aliases
-alias -s {md,cs,ts,js,json,css,html}=codium
+alias -s {txt,md,cs,ts,js,json,css,html}=nvim
