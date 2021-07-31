@@ -96,8 +96,10 @@ alias \
   ec="$EDITOR $ZDOTDIR/.zshrc" \
   sc=src \
   reload!=src \
-  aedit=" $EDITOR $ZDOTDIR/.zsh/aliases.zsh; source $ZDOTDIR/.zsh/aliases.zsh" \
-  fedit=" $EDITOR $ZDOTDIR/.zsh/functions; source $ZDOTDIR/.zsh/functions/*" \
+  zu="zinit self-update; zinit update --parallel" \
+  zc="_evalcache_clear" \
+  aedit="$EDITOR $SHELL_CONFIG/aliasrc; source $SHELL_CONFIG/aliasrc" \
+  fedit="$EDITOR $SHELL_CONFIG/functions; source $SHELL_CONFIG/functions/*" \
   mem="free -m -l -t" \
   disk="df -h" \
   cpu="lscpu" \
