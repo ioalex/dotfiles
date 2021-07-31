@@ -3,7 +3,7 @@
 # Search digital garden and open it in Neovim
 vn() {
   local garden
-  garden=$(fd . "$HOME/Garden" | fzf)
+  garden=$(fd . "$GARDEN" | fzf)
   if [[ -n $garden ]]
   then
     nvim $garden
