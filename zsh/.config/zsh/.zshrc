@@ -55,15 +55,31 @@ if [ -f “${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br” ]; then
 fi
 
 # Plugins - managed with Zinit
-# Regular plugins loaded without investigating.
+# Load prompt first - without investigating
 zinit ice depth=1; zinit light romkatv/powerlevel10k
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
-zinit light zdharma/fast-syntax-highlighting
 zinit light mroth/evalcache
-zinit ice wait"2" lucid; zinit snippet OMZP::sudo
-zinit ice wait"2" lucid; zinit snippet OMZP::zsh_reload
 
+# Plugins loaded in turbo mode and without investigating.
+# wait allows the user postponing loading of a plugin to the moment when the processing of .zshrc is finished and the first prompt is being shown
+zinit wait lucid light-mode for \
+  atinit"zicompinit; zicdreplay" \
+      zdharma/fast-syntax-highlighting \
+  atload"_zsh_autosuggest_start" \
+      zsh-users/zsh-autosuggestions \
+  blockf atpull"zinit creinstall -q ." \
+      zsh-users/zsh-completions
+
+# Load snippets asynchronously
+zinit wait lucid for \
+  OMZP::sudo \
+  OMZP::zsh_reload
+
+# Plugins to install / load if on Mac OSX
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  zinit ice wait lucid; zinit snippet PZTM::osx
+fi
+
+# Use evalcache to cache evals; reducing startup time
 _evalcache fnm env
 _evalcache zoxide init zsh
 _evalcache thefuck --alias fuck
