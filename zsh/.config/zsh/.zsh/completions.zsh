@@ -19,24 +19,18 @@ fi;
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path "$XDG_CACHE_HOME/zsh/zcompdump"
 
-# disable zsh bundled function mtools command mcd
-# which causes a conflict.
+# Load complist module
+# Provides menu list for select completion results
+zmodload -i zsh/complist
+
+# Include hidden files
+_comp_options+=(globdots)
+
+# disable zsh bundled function mtools command mcd which causes a conflict.
 compdef -d mcd
 
 # Files to ignore during completion
 fignore=(DS_Store $fignore)
-
-# _comp_files=($XDG_CACHE_HOME/zsh/zcompcache(Nm-20))
-# if (( $#_comp_files )); then
-#     compinit -i -C -d "$XDG_CACHE_HOME/zsh/zcompcache"
-# else
-#     compinit -i -d "$XDG_CACHE_HOME/zsh/zcompcache"
-# fi
-# unset _comp_files
-
-# Load complist module
-# Provides menu list for select completion results
-zmodload -i zsh/complist
 
 # Verbose completion results
 zstyle ':completion:*' verbose true
