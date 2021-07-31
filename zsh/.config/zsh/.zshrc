@@ -61,6 +61,7 @@ zinit light mroth/evalcache
 zinit snippet OMZP::sudo
 zinit snippet OMZP::zsh_reload
 
+# Cache evals to reduce startup time
 _evalcache fnm env
 _evalcache zoxide init zsh
 _evalcache thefuck --alias fuck
