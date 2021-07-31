@@ -1,5 +1,0 @@
-# Cache evals to reduce startup time
-_evalcache fnm env
-_evalcache zoxide init zsh
-_evalcache thefuck --alias fuck
-_evalcache hub alias -s

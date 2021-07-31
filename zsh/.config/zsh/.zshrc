@@ -54,13 +54,17 @@ if [ -f “${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br” ]; then
 	source “${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br”
 fi
 
-if [ -f “${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins.zsh” ]; then
-    # shellcheck source=/dev/null
-	source “${XDG_CONFIG_HOME:-$HOME/.config}/zsh/plugins.zsh”
-fi
+# Plugins - managed with Zinit
+# Regular plugins loaded without investigating.
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zdharma/fast-syntax-highlighting
+zinit light mroth/evalcache
+zinit ice wait"2" lucid; zinit snippet OMZP::sudo
+zinit ice wait"2" lucid; zinit snippet OMZP::zsh_reload
 
-if [ -f “${XDG_CONFIG_HOME:-$HOME/.config}/zsh/_evalcache” ]; then
-    # shellcheck source=/dev/null
-	source “${XDG_CONFIG_HOME:-$HOME/.config}/zsh/_evalcache”
-fi
-
+_evalcache fnm env
+_evalcache zoxide init zsh
+_evalcache thefuck --alias fuck
+_evalcache hub alias -s
