@@ -23,7 +23,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Source shell configuration
+# Source environment variables
+env_files=(~/.config/shell/**/*.env)
+for file in "${env_files[@]}"; do
+  # shellcheck source=/dev/null
+  source "$file"
+done
+
+# Source shell aliases
 shellrc+=("$SHELL_CONFIG/aliasrc")
 for file in "${shellrc[@]}"; do
   if [[ -a "$file" ]]; then
@@ -43,7 +50,8 @@ else
 fi
 
 # Source Z-Shell configuration files
-config_files=(~/.config/zsh/.zsh/**/*.zsh(N))
+# config_files=(~/.config/zsh/.zsh/**/*.zsh(N))
+config_files=("${XDG_CONFIG_HOME:="$HOME/.config"}/zsh"/.zsh/**/*.zsh(N))
 for file in ${config_files}
 do
   source $file
