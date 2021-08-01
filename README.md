@@ -55,7 +55,7 @@ sudo pacman -S stow
 brew install stow
 
 # WSL2 / Ubuntu:
-sudo apt-get stow
+sudo apt-get install -y stow
 ```
 
 Get dots! 😎:
