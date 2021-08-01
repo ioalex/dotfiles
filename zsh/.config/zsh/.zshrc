@@ -84,7 +84,7 @@ zinit wait lucid for \
 
 # Plugins to install / load if on Mac OSX
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  zinit ice wait lucid; zinit snippet PZTM::osx
+  zinit ice svn wait lucid; zinit snippet PZT::modules/osx
 fi
 
 # Use evalcache to cache evals; reducing startup time
