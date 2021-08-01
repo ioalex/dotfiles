@@ -4,5 +4,8 @@
 # This file is used for setting user's environment variables; it should not contain commands that produce output or assume the shell is attached to a TTY. When this file exists it will always be read.
 # Source: <https://wiki.archlinux.org/title/Zsh>
 
+# Disable system-wide zshrc from running compinit - as we will have our own compinit startup code - Ubuntu does this.
+skip_global_compinit=1
+
 # See: <https://www.reddit.com/r/zsh/comments/luoicb/zshenv_doesnt_export_variables_and_has_a_weird/>
 export ZDOTDIR="${XDG_CONFIG_HOME:="$HOME/.config"}/zsh"
