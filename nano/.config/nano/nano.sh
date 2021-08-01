@@ -1,11 +1,5 @@
-#!/bin/sh
-#
-# nano.sh
-# Author: Alex <alex@alexhe.io>
-# Year: 2020
-#
-# Distributed under terms of the Unlicense license.
-#
+#!/usr/bin/env bash
+# shellcheck shell=bash
 
 # Installs Improved Syntax Highlighting for Nano
 echo "Installing Improved Syntax Highlighting for Nano..."
@@ -23,5 +17,5 @@ else
   echo "\n"
   echo "\u2713: The following Nano syntax files have been installed to ~/.config/nano/syntax/ :"
   ls
-  cd "$DOTFILES" || { echo "\u274c: Failure: ~/.dotfiles not found!"; exit 1; }
+  cd "$DOTFILES" || { echo "\u274c: Failure: ~/dotfiles not found!"; exit 1; }
 fi
