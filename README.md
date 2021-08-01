@@ -6,6 +6,9 @@
 
 - [Features](#features)
 - [Information](#information)
+  - [Arch Linux](#arch-linux)
+  - [Mac OSX](#mac-osx)
+  - [Windows 10 WSL2](#windows-10-wsl2)
 - [Quickstart](#quickstart)
 - [Wiki](#wiki)
 - [Inspiration](#inspiration)
@@ -58,7 +61,7 @@ brew install stow
 sudo apt-get install -y stow
 ```
 
-Get dots! 😎:
+Get / install dotfiles:
 
 ```sh
 $ git clone --recursive https://github.com/ioalex/dotfiles.git       # Clone this git repository
