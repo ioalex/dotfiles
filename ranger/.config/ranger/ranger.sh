@@ -7,7 +7,7 @@ printf "\n"
 
 if ! command -v ranger >/dev/null 2>&1; then
   echo "\u274c: The command 'ranger' was not found on your system."
-  echo "Please try running 'brew install ranger' or use the 'brew.sh' script"
+  echo "Please find a way to install it on your system"
   echo "before attempting to install plugins!"
 else
   # Ranger Dev Icons
