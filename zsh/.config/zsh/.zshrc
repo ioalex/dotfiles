@@ -20,6 +20,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  # shellcheck source=/dev/null
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
@@ -54,6 +55,7 @@ fi
 config_files=("${XDG_CONFIG_HOME:="$HOME/.config"}/zsh"/.zsh/**/*.zsh(N))
 for file in ${config_files}
 do
+  # shellcheck source=/dev/null
   source $file
 done
 
