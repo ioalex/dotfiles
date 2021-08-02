@@ -68,6 +68,7 @@ TODO              text
 *.{bat,[bB][aA][tT]}     text eol=crlf
 *.{cmd,[cC][mM][dD]}     text eol=crlf
 *.ps1                    text eol=crlf
+*.reg                    text eol=crlf
 
 # Configs
 *.cnf             text
