@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # shellcheck shell=bash
 # shellcheck disable=SC1009,SC1073,SC1036,SC1072
 

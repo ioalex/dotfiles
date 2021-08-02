@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 # Source: <https://gist.github.com/joelpalmer/7f92a5a337097f25f6dc8eaeb831028b>
 
 # @todo make cdg ignore .local and .cache

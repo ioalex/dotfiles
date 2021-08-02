@@ -1,5 +1,6 @@
-#!/usr/bin/env bash
 # shellcheck shell=bash
+# shellcheck disable=SC2015
+
 # Source: <github.com/thoughtbot/dotfiles/blob/master/zsh/functions/mcd>
 
 # Make directory and change into it.

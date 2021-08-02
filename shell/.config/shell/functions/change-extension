@@ -1,5 +1,6 @@
-#!/usr/bin/env bash
 # shellcheck shell=bash
+# shellcheck disable=SC1073,SC1036,SC1056,SC1072,SC1009
+
 # Source: <https://github.com/thoughtbot/dotfiles/blob/master/zsh/functions/change-extension>
 
 # Change file extensions recursively in current directory

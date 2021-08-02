@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
 # shellcheck shell=bash
+
 # Source: <https://github.com/thoughtbot/dotfiles/blob/master/zsh/functions/g>
 
 # No arguments: `git status`

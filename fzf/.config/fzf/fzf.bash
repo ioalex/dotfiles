@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 # Setup fzf
 # ---------
 if [[ ! "$PATH" == *usr/bin/fzf* ]]; then

@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # shellcheck disable=2148
 
 # The mere presence of this file in the home directory should disable the system

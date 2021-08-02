@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # shellcheck shell=bash
 # shellcheck disable=SC2157,SC1036,SC1090,SC2128,SC2086
 #

@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 # Set History file location
 export HISTFILE="$BASH_HISTORY_DIR"/history
 

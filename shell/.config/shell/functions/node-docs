@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
 # shellcheck shell=bash
+
 # Source: <https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node>
 
 function node-docs {
