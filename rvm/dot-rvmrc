@@ -1,0 +1,3 @@
+# Clean up home directory by moving rvm to $XDG_DATA_HOME
+
+export rvm_path=/home/alex/.local/share/rvm
