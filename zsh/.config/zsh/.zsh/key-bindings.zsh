@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 # Source: williamclot https://github.com/microsoft/terminal/issues/755
 bindkey -e
 
