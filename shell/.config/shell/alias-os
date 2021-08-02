@@ -21,10 +21,31 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     zzz="sudo systemctl suspend" \
     xbk='xbindkeys -f "$HOME/.config/xbindkeys/config"'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-	  alias \
+	alias \
     o=open \
     st=speedtest-cli \
     speedtest=speedtest-cli
+
+  # Brew commands
+  alias \
+    b=brew \
+    br=brew \
+    bs="brew search" \
+    bsd="brew search --desc" \
+    bi="brew info" \
+    bis="brew install" \
+    bui="brew uninstall" \
+    bdr="brew doctor" \
+    bcu="brew cleanup" \
+    bdu="brew bundle dump --describe" \
+    bls="brew ls" \
+    cask="brew cask" \
+    ci="cask info" \
+    cis="cask install" \
+    cus="cask uninstall" \
+    cuz="cask zap" \
+    blv="brew leaves" \
+    brewup="brew -v update && brew -v upgrade && brew cask upgrade && brew -v cleanup --prune=5 && brew doctor"
 else
 	echo "No platform-specific aliases for this system."
 fi
