@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck shell=bash
+# shellcheck disable=SC2034
 
 # History Setup
 HISTFILE="$ZSH_HISTORY_DIR"/history
