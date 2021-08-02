@@ -10,8 +10,10 @@
 # I source them here with the line below.
 
 if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile" ]; then
+  # shellcheck source=/dev/null
 	. "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile"
 else
+  # shellcheck source=/dev/null
 	. "$HOME/.xprofile"
 fi
 
