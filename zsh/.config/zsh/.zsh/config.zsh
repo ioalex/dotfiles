@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 # General Settings
 
 setopt autocd		# Automatically cd into typed directory.
