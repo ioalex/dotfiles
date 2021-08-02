@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # shellcheck shell=bash
+# shellcheck disable=SC1036
 
 # Information
 # LAST UPDATED: 10/06/2021
@@ -44,7 +45,7 @@ done
 if [ -d "$SHELL_CONFIG/functions" ]; then
   for file in "$SHELL_CONFIG/functions"/*; do
     # source $file
-    autoload -Uz $file
+    autoload -Uz "$file"
   done
 else
    echo "No functions available."
@@ -53,15 +54,15 @@ fi
 # Source Z-Shell configuration files
 # config_files=(~/.config/zsh/.zsh/**/*.zsh(N))
 config_files=("${XDG_CONFIG_HOME:="$HOME/.config"}/zsh"/.zsh/**/*.zsh(N))
-for file in ${config_files}
+for file in "${config_files[@]}"
 do
   # shellcheck source=/dev/null
-  source $file
+  source "$file"
 done
 
-if [ -f “${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br” ]; then
+if [ -f "${XDG_CONFIG_HOME:-"$HOME/.config"}/broot/launcher/bash/br" ]; then
     # shellcheck source=/dev/null
-	source “${XDG_CONFIG_HOME:-$HOME/.config}/broot/launcher/bash/br”
+	source "${XDG_CONFIG_HOME:-"$HOME/.config"}/broot/launcher/bash/br"
 fi
 
 # Plugins - managed with Zinit
