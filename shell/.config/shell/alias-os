@@ -4,14 +4,25 @@ UNAMECHECK=$(uname -r);
 
 if [[ $UNAMECHECK == *[mM]"icrosoft"* ]] && [[ "$OSTYPE" == "linux-gnu"* ]]; then
   alias \
+    o=explorer.exe \
+    open=explorer.exe \
     st=speedtest-cli \
     speedtest=speedtest-cli
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	alias \
+    o=xdg-open \
+    open=xdg-open \
     st=speedtest++ \
-    speedtest=speedtest++
+    speedtest=speedtest++ \
+    gpu="grep -i memory /var/log/Xorg.0.log" \
+    lck="betterlockscreen --lock dim" \
+    sdn="sudo shutdown -h now" \
+    sleep="sudo systemctl suspend" \
+    zzz="sudo systemctl suspend" \
+    xbk='xbindkeys -f "$HOME/.config/xbindkeys/config"'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	  alias \
+    o=open \
     st=speedtest-cli \
     speedtest=speedtest-cli
 else

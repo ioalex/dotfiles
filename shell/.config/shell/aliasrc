@@ -52,7 +52,6 @@ alias \
   hs="history | rg" \
 	ka=killall \
   :q=exit \
-  open=xdg-open \
   r=ranger \
   nf=neofetch \
   n="nnn -deo" \
@@ -102,13 +101,8 @@ alias \
   fedit="$EDITOR $SHELL_CONFIG/functions; source $SHELL_CONFIG/functions/*" \
   mem="free -m -l -t" \
   disk="df -h" \
-  cpu="lscpu" \
-  gpu="grep -i memory /var/log/Xorg.0.log" \
-  sdn="sudo shutdown -h now" \
-  sleep="sudo systemctl suspend" \
-  zzz="sudo systemctl suspend" \
-  lck="betterlockscreen --lock dim" \
-  xbk='xbindkeys -f "$HOME/.config/xbindkeys/config"'
+  cpu="lscpu"
+
 
 # For commands that are too ambiguous or for ease of remembering
 alias \
@@ -156,7 +150,8 @@ alias \
   ll="exa -Fal --icons --color=auto --group-directories-first --git" \
   lt="\ls --human-readable --size -1 -S --classify -a --color=auto" \
   l.='exa -a | egrep "^\."' \
-  trees=br
+  trees=br \
+  cg=cd-gitroot
 
 # Directory Shortcuts
 alias \
@@ -180,6 +175,15 @@ alias \
   gpp="git pull" \
   glog="git log --oneline --decorate --graph" \
   lg=lazygit
+
+# Gitit Aliases
+alias \
+  gg=gitit \
+  ggc="gitit commits" \
+  ggpr="gitit pulls" \
+  ggb="gitit branches all" \
+  ggi="gitit issues" \
+  ggs="gitit grep"
 
 # gb # Lists all git branches in current repository
 # gcb # Create new branch
@@ -226,3 +230,4 @@ alias fk=fuck
 
 # Suffix Aliases
 alias -s {txt,md,cs,ts,js,json,css,html}=nvim
+alias -s {log,cache}=lnav
