@@ -1,3 +1,6 @@
+# shellcheck shell=bash
+
+# shellcheck source=/dev/null
 # FZF Configuration
 [ -f ~/.config/fzf/fzf.zsh ] && source ~/.config/fzf/fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
