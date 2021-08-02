@@ -77,7 +77,9 @@ zinit wait lucid light-mode for \
   atload"_zsh_autosuggest_start" \
       zsh-users/zsh-autosuggestions \
   blockf atpull"zinit creinstall -q ." \
-      zsh-users/zsh-completions
+      zsh-users/zsh-completions \
+  mollifier/cd-gitroot \
+  peterhurford/git-it-on.zsh
 
 # Load snippets asynchronously
 zinit wait lucid for \
@@ -87,6 +89,7 @@ zinit wait lucid for \
 # Plugins to install / load if on Mac OSX
 if [[ "$OSTYPE" == "darwin"* ]]; then
   zinit ice svn wait lucid; zinit snippet PZT::modules/osx
+  zinit wait lucid; zinit snippet OMZP::dash
 fi
 
 # Use evalcache to cache evals; reducing startup time
