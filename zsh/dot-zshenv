@@ -7,5 +7,29 @@
 # Disable system-wide zshrc from running compinit - as we will have our own compinit startup code - Ubuntu does this.
 skip_global_compinit=1
 
+# Setup environment
+
+# Set locale / languages
+export \
+  LANG=en_US.UTF-8 \
+  LC_ALL=en_US.UTF-8
+
+# Terminal
+export TERM="xterm-256color"
+export TERMINAL="alacritty"
+
+# Set Editor Defaults
+export EDITOR="nvim"
+export VEDITOR=$EDITOR
+export VISUAL=$EDITOR
+export CODEEDITOR="vscodium"
+
+# Other applications
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export PAGER="most"
+export BROWSER="brave"
+export READER="zathura"
+export WM="i3"
+
 # See: <https://www.reddit.com/r/zsh/comments/luoicb/zshenv_doesnt_export_variables_and_has_a_weird/>
 export ZDOTDIR="${XDG_CONFIG_HOME:="$HOME/.config"}/zsh"
