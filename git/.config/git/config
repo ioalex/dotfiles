@@ -2,15 +2,16 @@
   autosetupmerge = true
 
 [color]
-  branch = auto
-  diff = auto
-  interactive = auto
-  status = auto
 	ui = auto
+  branch = true
+  diff = true
+  interactive = true
+  status = true
 
 [color "branch"]
   current = green
   remote = yellow
+  upstream = cyan
 
 [commit]
 	template = ~/.config/git/commitmsg
@@ -19,6 +20,9 @@
 	excludesfile = ~/.config/git/ignore
 	attributesfile = ~/.config/git/attributes
   editor = nvim
+  pager = delta
+  autocrlf = false
+  whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
 [credential]
 	helper = store
@@ -32,13 +36,24 @@
 [diff]
   tool = delta
   guitool = lazygit
-  renames = copies
+  renames = true
+  mnemonicPrefix = true
+
+[fetch]
+  recurseSubmodules = on-demand
+  prune = true
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[grep]
+  break = true
+  heading = true
+  lineNumber = true
+  extendedRegexp = true
 
 [help]
 	autocorrect = 20
@@ -52,9 +67,17 @@
 
 [init]
 	defaultBranch = main
+  templatedir = ~/.config/git/templates
 
 [interactive]
   diffFilter = delta --color-only
+
+[log]
+  abbrevCommit = true
+  follow = true
+
+[merge]
+  ff = only
 
 [pager]
   diff = delta
@@ -62,5 +85,15 @@
   reflog = delta
   show = delta
 
+[pull]
+  rebase = false
+
 [push]
   default = current
+
+[rebase]
+  autosquash = true
+
+[status]
+  submoduleSummary = true
+  showUntrackedFiles = all
