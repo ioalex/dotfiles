@@ -80,6 +80,7 @@ zinit wait lucid $load-mode for \
       zsh-users/zsh-autosuggestions \
   blockf atpull"zinit creinstall -q ." \
       zsh-users/zsh-completions \
+  hlissner/zsh-autopair \
   mollifier/cd-gitroot \
   peterhurford/git-it-on.zsh
 
