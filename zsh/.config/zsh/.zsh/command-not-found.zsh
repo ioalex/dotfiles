@@ -1,3 +1,6 @@
+# shellcheck shell=bash
+# shellcheck disable=SC2206,SC2059,SC2034
+
 # Uses pacman
 # Note: The files database of pacman is separate from the normal sync database and it needs to be fetched using pacman -Fy
 # Source: <https://wiki.archlinux.org/title/Zsh#pacman_-F_%22command_not_found%22_handler>
