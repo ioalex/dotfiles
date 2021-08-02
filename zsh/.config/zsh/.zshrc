@@ -41,13 +41,13 @@ for file in "${shellrc[@]}"; do
 done
 
 # Source shell functions
-if [ -z "$SHELL_CONFIG/functions" ]; then
-   echo "No functions available."
-else
+if [ -d "$SHELL_CONFIG/functions" ]; then
   for file in "$SHELL_CONFIG/functions"/*; do
     # source $file
     autoload -Uz $file
   done
+else
+   echo "No functions available."
 fi
 
 # Source Z-Shell configuration files
