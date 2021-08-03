@@ -28,15 +28,15 @@ fi
 env_files=(~/.config/shell/**/*.env)
 for file in "${env_files[@]}"; do
   # shellcheck source=/dev/null
-  source "$file"
+  source "${file}"
 done
 
 # Source shell aliases
 shellrc+=("$SHELL_CONFIG/aliasrc")
 for file in "${shellrc[@]}"; do
-  if [[ -a "$file" ]]; then
+  if [[ -a "${file}" ]]; then
     # shellcheck source=/dev/null
-    source "$file"
+    source "${file}"
   fi
 done
 
@@ -44,7 +44,7 @@ done
 if [ -d "$SHELL_CONFIG/functions" ]; then
   for file in "$SHELL_CONFIG/functions"/*; do
     # source $file
-    autoload -Uz "$file"
+    autoload -Uz "${file}"
   done
 else
    echo "No functions available."
@@ -56,7 +56,7 @@ config_files=("${XDG_CONFIG_HOME:="$HOME/.config"}/zsh"/.zsh/**/*.zsh(N))
 for file in "${config_files[@]}"
 do
   # shellcheck source=/dev/null
-  source "$file"
+  source "${file}"
 done
 
 if [ -f "${XDG_CONFIG_HOME:-"$HOME/.config"}/broot/launcher/bash/br" ]; then
@@ -69,11 +69,11 @@ load=light
 
 # Load prompt first - without investigating
 zinit ice depth=1; zinit $load romkatv/powerlevel10k
-zinit $load mroth/evalcache
+zinit ${load} mroth/evalcache
 
 # Plugins loaded in turbo mode and without investigating.
 # wait allows the user postponing loading of a plugin to the moment when the processing of .zshrc is finished and the first prompt is being shown
-zinit wait lucid $load-mode for \
+zinit wait lucid ${load}-mode for \
   atinit"zicompinit; zicdreplay" \
       zdharma/fast-syntax-highlighting \
   atload"_zsh_autosuggest_start" \
