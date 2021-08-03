@@ -15,21 +15,26 @@ export \
   LC_ALL=en_US.UTF-8
 
 # Terminal
-export TERM="xterm-256color"
-export TERMINAL="alacritty"
+export \
+  TERM="xterm-256color" \
+  TERMINAL="kitty"
 
 # Set Editor Defaults
-export EDITOR="nvim"
-export VEDITOR=$EDITOR
-export VISUAL=$EDITOR
-export CODEEDITOR="vscodium"
+export \
+  EDITOR="nvim" \
+  VEDITOR=$EDITOR \
+  VISUAL=$EDITOR \
+  CODEEDITOR="vscodium"
 
-# Other applications
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export PAGER="most"
-export BROWSER="brave"
-export READER="zathura"
-export WM="i3"
+# Set other application defaults
+export \
+  MANPAGER="sh -c 'col -bx | bat -l man -p'" \
+  PAGER="most" \
+  BROWSER="brave" \
+  READER="zathura" \
+  WM="i3"
 
 # See: <https://www.reddit.com/r/zsh/comments/luoicb/zshenv_doesnt_export_variables_and_has_a_weird/>
+
+# Set default Z-Shell startup files directory
 export ZDOTDIR="${XDG_CONFIG_HOME:="$HOME/.config"}/zsh"
