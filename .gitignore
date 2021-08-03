@@ -1,12 +1,18 @@
-\.zinit
-\syntax
+\buffers
+\backups
 \plugins
-!nnn/.config/nnn/plugins
 \sessions
-espanso/.config/espanso/user
+\syntax
+\user
+\.zinit
 
+!nnn/.config/nnn/plugins
+
+# Specifics
 redshift.conf
 npmrc
+redshift.env
+npm.env
 
 # Backups
 *.bak
@@ -28,10 +34,7 @@ tags
 *.*hist
 
 # Secrets
-redshift.env
-npm.env
 *secrets*
-
 # Git Secrets
 .gitsecret/keys/random_seed
 !*.secret
