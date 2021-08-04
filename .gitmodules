@@ -7,3 +7,6 @@
 [submodule "wallpapers/Pictures/Wallpapers"]
 	path = wallpapers/Pictures/Wallpapers
 	url = https://github.com/ioalex/Wallpapers.git
+[submodule "@win/AutoHotkey"]
+	path = @win/AutoHotkey
+	url = https://github.com/ioalex/ahk.git
