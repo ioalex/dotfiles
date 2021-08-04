@@ -39,6 +39,9 @@ bindsym Ctrl+space exec --no-startup-id rofi -show run
 
 bindsym $mod+Shift+f exec --no-startup-id $term -e $file-manager
 
+# greenclip (clipboard manager)
+bindsym $mod+Shift+a exec --no-startup-id `rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'`
+
 # rofi-calc (calculator)
 bindsym $mod+c exec --no-startup-id `rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | xclip -sel clip"`
 bindsym $mod+equal exec --no-startup-id `rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | xclip -sel clip"`
