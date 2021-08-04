@@ -63,10 +63,6 @@ alias \
   vi="$EDITOR" \
   svi="sudo $EDITOR" \
   edit="$EDITOR" \
-  code="$VISUAL" \
-  vscode="$VISUAL" \
-  code-exp="code --list-extensions | tee $HOME/dotfiles/vscode-extensions.txt" \
-  code-imp="xargs -n1 code --install-extension < $HOME/dotfiles/vscode-extensions.txt" \
   m=micro \
   1f=onefetch \
   of=onefetch \
@@ -103,6 +99,18 @@ alias \
   disk="df -h" \
   cpu="lscpu"
 
+# VSCode or VSCodium
+if ! command -v code /dev/null 2>&1; then
+  alias \
+    code="$CODEEDITOR" \
+    vscode="$CODEEDITOR"
+else
+  alias vscode="code"
+fi
+
+alias \
+  code-exp="code --list-extensions | tee $HOME/dotfiles/vscode-extensions.txt" \
+  code-imp="xargs -n1 code --install-extension < $HOME/dotfiles/vscode-extensions.txt"
 
 # For commands that are too ambiguous or for ease of remembering
 alias \
