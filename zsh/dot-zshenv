@@ -22,8 +22,8 @@ export \
 # Set Editor Defaults
 export \
   EDITOR="nvim" \
-  VEDITOR=$EDITOR \
-  VISUAL=$EDITOR \
+  VEDITOR="nvim" \
+  VISUAL="nvim" \
   CODEEDITOR="vscodium"
 
 # Set other application defaults
