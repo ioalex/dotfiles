@@ -13,3 +13,6 @@
 [submodule "@osx/cleanmymac"]
 	path = @osx/cleanmymac
 	url = https://github.com/thelamehacker/cleanmymac.git
+[submodule "@osx/Alfred/Alfred.alfredpreferences"]
+	path = @osx/Alfred/Alfred.alfredpreferences
+	url = https://github.com/ioalex/Alfred.alfredpreferences.git
