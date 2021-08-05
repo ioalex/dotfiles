@@ -67,7 +67,7 @@ alias \
   1f=onefetch \
   of=onefetch \
   caff=caffeinate \
-  elist="export -p | most" \
+  elist="export -p | bat" \
   t-e="trash-empty" \
   t-l="trash-list" \
   t-r="trash-restore" \

@@ -29,7 +29,7 @@ export \
 # Set other application defaults
 export \
   MANPAGER="sh -c 'col -bx | bat -l man -p'" \
-  PAGER="most" \
+  PAGER="bat" \
   BROWSER="brave" \
   READER="zathura" \
   WM="i3"
