@@ -10,3 +10,6 @@
 [submodule "@win/AutoHotkey"]
 	path = @win/AutoHotkey
 	url = https://github.com/ioalex/ahk.git
+[submodule "@osx/cleanmymac"]
+	path = @osx/cleanmymac
+	url = https://github.com/thelamehacker/cleanmymac.git
