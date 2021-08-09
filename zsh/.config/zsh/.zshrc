@@ -1,5 +1,5 @@
 # shellcheck shell=bash
-# shellcheck disable=SC1036
+# shellcheck disable=SC1036,SC2034
 
 # Information
 # LAST UPDATED: 10/06/2021
