@@ -12,6 +12,8 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	alias \
     o=xdg-open \
     open=xdg-open \
+    pbcopy="xclip -selection clipboard -in" \
+    pbpaste="xclip -selection clipboard -out" \
     st=speedtest++ \
     speedtest=speedtest++ \
     gpu="grep -i memory /var/log/Xorg.0.log" \
@@ -23,6 +25,8 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	alias \
     o=open \
+    pbc=pbcopy \
+    pbp=pbpaste \
     cpu-temp=osx-cpu-temp \
     st=speedtest-cli \
     speedtest=speedtest-cli
