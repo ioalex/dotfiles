@@ -1,7 +1,15 @@
 # shellcheck shell=bash
 # shellcheck disable=SC1009,SC1073,SC1036,SC1072
 
-# fpath+=~/.config/zsh/.zsh/completions/_fnm
+# Completion
+setopt ALWAYS_TO_END                       # Move cursor to end if word had one match
+setopt AUTO_LIST                           # Automatically list choices on ambiguous completion.
+setopt AUTO_MENU                           # Automatically use menu completion after the second consecutive request for completion.
+setopt AUTO_PARAM_SLASH                    # If a parameter is completed whose content is the name of a directory, then add a trailing slash instead of a space.
+setopt AUTO_REMOVE_SLASH                   # If a completion ends with a slash and you type a word delimiter, a slash, or a character that ends a command, remove the slash.
+setopt COMPLETE_ALIASES                    # Prevents aliases on the command line from being internally substituted before completion is attempted.
+setopt COMPLETE_IN_WORD                    # Complete from both ends of a word.
+setopt HASH_LIST_ALL                       # Whenever a command completion or spelling correction is attempted, make sure the entire command path is hashed first.
 
 fpath=(~/.config/zsh/.zsh/completions /usr/share/zsh/site-functions $fpath)
 
@@ -49,11 +57,6 @@ zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:corrections' format '%U%F{green}%d (errors: %e)%f%u'
 zstyle ':completion:*:warnings' format '%F{202}%BSorry, no matches for: %F{214}%d%b'
-
-# Autocompletion menu
-setopt AUTO_LIST # Automatically list choices on ambiguous completion
-setopt AUTO_MENU # Automatically use menu completion
-setopt ALWAYS_TO_END # Move cursor to end if word had one match
 
 # Improve autocompletion style
 zstyle ':completion:*' menu select # Select completions with arrow keys
