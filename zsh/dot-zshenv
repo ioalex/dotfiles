@@ -10,9 +10,16 @@ skip_global_compinit=1
 # Setup environment
 
 # Set locale / languages
+export LANG=en_US.UTF-8
 export \
-  LANG=en_US.UTF-8 \
-  LC_ALL=en_US.UTF-8
+  LANGUAGE=$LANG \
+  LC_ALL=$LANG \
+  LC_COLLATE=$LANG \
+  LC_CTYPE=$LANG \
+  LC_MONETARY=$LANG \
+  LC_NUMERIC=$LANG \
+  LC_TIME=$LANG \
+  LESSCHARSET=utf-8
 
 # Terminal
 export \
@@ -20,10 +27,10 @@ export \
   TERMINAL="kitty"
 
 # Set Editor Defaults
+export EDITOR="nvim"
 export \
-  EDITOR="nvim" \
-  VEDITOR="nvim" \
-  VISUAL="nvim" \
+  VEDITOR=$EDITOR \
+  VISUAL=$EDITOR \
   CODEEDITOR="vscodium"
 
 # Set other application defaults
