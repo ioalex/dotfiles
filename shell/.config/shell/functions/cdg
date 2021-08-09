@@ -2,11 +2,10 @@
 
 # Source: <https://gist.github.com/joelpalmer/7f92a5a337097f25f6dc8eaeb831028b>
 
-# @todo make cdg ignore .local and .cache
-
 # find all git repos, select one and CD to its parent dir
 cdg() {
   local file
   local dir
-  file=$(fd -H -g .git | fzf) && dir=$(dirname "$file") && cd "$dir"
+  file=$(fd -H -g .git --ignore-file ~/.config/git/ignore | fzf) && dir=$(dirname "$file") && cd "$dir"
 }
+

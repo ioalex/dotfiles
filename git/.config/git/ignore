@@ -1,3 +1,6 @@
+\.cache
+\.local/share
+
 \node_modules
 node_modules/*
 
