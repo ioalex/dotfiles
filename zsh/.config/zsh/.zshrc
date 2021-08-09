@@ -64,6 +64,16 @@ if [ -f "${XDG_CONFIG_HOME:-"$HOME/.config"}/broot/launcher/bash/br" ]; then
 	source "${XDG_CONFIG_HOME:-"$HOME/.config"}/broot/launcher/bash/br"
 fi
 
+# Homebrew version of ZSH comes with helpfiles
+if [[ -d /opt/homebrew/share/zsh ]]; then
+  unalias run-help
+  autoload run-help
+  HELPDIR=/opt/homebrew/share/zsh/helpfiles
+fi
+
+# Automatically remove duplicates from these arrays
+typeset -U path cdpath fpath manpath
+
 # Plugins - managed with Zinit
 load=light
 
