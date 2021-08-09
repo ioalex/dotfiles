@@ -90,6 +90,9 @@ Please see the [wiki](https://github.com/ioalex/dotfiles/wiki) for more in-depth
 - [LukeSmithxyz/voidrice](https://github.com/LukeSmithxyz/voidrice)
 - [maximbaz/dotfiles](https://github.com/maximbaz/dotfiles)
 - [dwt1/dotfiles](https://gitlab.com/dwt1/dotfiles)
+- [huyvohcmc/dotfiles](https://github.com/huyvohcmc/dotfiles)
+- [aeolyus/dotfiles](https://github.com/aeolyus/dotfiles)
+- [xero/dotfiles](https://github.com/xero/dotfiles)
 
 ```text
     .--.
