@@ -1,3 +1,4 @@
+# vim:ft=zsh
 # shellcheck shell=bash
 # shellcheck disable=SC2206,SC2059,SC2034
 

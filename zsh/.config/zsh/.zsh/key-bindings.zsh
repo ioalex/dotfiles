@@ -1,3 +1,4 @@
+# vim:ft=zsh
 # shellcheck shell=bash
 
 # Source: williamclot https://github.com/microsoft/terminal/issues/755

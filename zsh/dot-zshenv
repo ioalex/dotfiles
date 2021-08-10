@@ -1,3 +1,4 @@
+# vim:ft=zsh
 # shellcheck shell=bash
 # shellcheck disable=SC2034
 
@@ -8,7 +9,7 @@
 skip_global_compinit=1
 
 function command_exists() {
-  command -v $1 &> /dev/null
+  command -v "$1" &> /dev/null
 }
 
 # Setup environment

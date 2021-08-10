@@ -1,3 +1,4 @@
+# vim:ft=zsh
 # shellcheck shell=bash
 
 # shellcheck source=/dev/null
