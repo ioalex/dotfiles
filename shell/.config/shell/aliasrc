@@ -3,7 +3,7 @@
 
 # Global Aliases
 alias -g G="| grep"
-alias -g L="| less"
+alias -g L="| zless"
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
@@ -11,6 +11,16 @@ alias -g L="| less"
 # Editors
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Colourise commands with grc
+if [ -f /usr/bin/grc ] || [ -f /usr/sbin/grc ]; then
+  alias \
+    last="grc last" \
+    make="grc make" \
+    gcc="grc gcc" \
+    tail="grc tail" \
+    head="grc head"
+fi
 
 # Verbosity and settings that you pretty much just always are going to want.
 # nocorrect: disables zsh auto-correct
@@ -126,6 +136,7 @@ alias \
 # Replace applications for common commands
 alias \
   cat=bat \
+  less=zless \
   please=sudo \
   pls=sudo \
   git="nocorrect hub" \
