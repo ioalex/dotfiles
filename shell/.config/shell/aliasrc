@@ -87,13 +87,13 @@ alias \
   fastping="ping -c 100 -s.2" \
   ports="netstat -tulanp" \
   myip="curl http://ipecho.net/plain; echo" \
-  ec="$EDITOR $ZDOTDIR/.zshrc" \
   sc=src \
   reload!=src \
   zu="zinit self-update; zinit update --parallel" \
   zc="_evalcache_clear" \
-  aedit="$EDITOR $SHELL_CONFIG/aliasrc; source $SHELL_CONFIG/aliasrc" \
-  fedit="$EDITOR $SHELL_CONFIG/functions; source $SHELL_CONFIG/functions/*" \
+  ec="$EDITOR $ZDOTDIR/.zshrc" \
+  ea="$EDITOR $SHELL_CONFIG/aliasrc; source $SHELL_CONFIG/aliasrc" \
+  ef="$EDITOR $SHELL_CONFIG/functions; source $SHELL_CONFIG/functions/*" \
   mem="free -m -l -t" \
   disk="df -h" \
   cpu="lscpu"
