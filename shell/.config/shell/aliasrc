@@ -30,6 +30,7 @@ alias \
 	bc="bc -ql" \
   mount="mount | column -t" \
   jobs="jobs -l" \
+  sudo="nocorrect sudo" \
   chown="nocorrect chown -v --preserve-root" \
   chmod="nocorrect chmod -v --preserve-root" \
   chgrp="nocorrect chgrp -v --preserve-root" \
@@ -240,5 +241,10 @@ alias FUCK=fuck # For Mondays!
 alias fk=fuck
 
 # Suffix Aliases
-alias -s {txt,md,cs,ts,js,json,css,html}=nvim
-alias -s {log,cache}=lnav
+
+[[ -n $DISPLAY ]] && {
+  alias -s {txt,md,cs,ts,js,json,css,html}=nvim
+  alias -s {log,cache}=lnav
+  alias -s {png,gif,jpg,jpeg}=feh
+  alias -s {pdf}=zathura
+}
