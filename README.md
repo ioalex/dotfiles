@@ -47,8 +47,8 @@ I primarily use and prefer [Z Shell (zsh)](https://www.zsh.org/), but occasional
 ### [Windows 10 & WSL2](https://docs.microsoft.com/en-us/windows/wsl/about)
 
 - **Release**: Windows 10 Build 16237+
-- **Distro**: [Ubuntu 20.04.2 LTS Build 20210222](https://www.microsoft.com/en-au/p/ubuntu-2004-lts/9n6svws3rx71)
-- **Window Manager**: [AquaSnap](https://www.nurgo-software.com/products/aquasnap)
+- **Distro**: [Ubuntu 20.04.2 LTS Build 20210222](https://www.microsoft.com/en-au/p/ubuntu-2004-lts/9n6svws3rx71) & [Pengwin](https://github.com/WhitewaterFoundry/Pengwin)
+- **Window Manager**: [PowerToys FancyZones](https://docs.microsoft.com/en-us/windows/powertoys/fancyzones) & [AquaSnap](https://www.nurgo-software.com/products/aquasnap)
 - **Package Manager**: [Chocolatey](https://chocolatey.org/)
 - **App Launcher**: [PowerToys](https://github.com/microsoft/PowerToys)
 - **Terminal**: [Windows Terminal](https://github.com/Microsoft/Terminal)
