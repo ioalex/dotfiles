@@ -5,12 +5,12 @@
 # Completion
 setopt ALWAYS_TO_END                       # Move cursor to end if word had one match
 setopt AUTO_LIST                           # Automatically list choices on ambiguous completion.
-setopt AUTO_MENU                           # Automatically use menu completion after the second consecutive request for completion.
 setopt AUTO_PARAM_SLASH                    # If a parameter is completed whose content is the name of a directory, then add a trailing slash instead of a space.
 setopt AUTO_REMOVE_SLASH                   # If a completion ends with a slash and you type a word delimiter, a slash, or a character that ends a command, remove the slash.
 setopt COMPLETE_ALIASES                    # Prevents aliases on the command line from being internally substituted before completion is attempted.
 setopt COMPLETE_IN_WORD                    # Complete from both ends of a word.
 setopt HASH_LIST_ALL                       # Whenever a command completion or spelling correction is attempted, make sure the entire command path is hashed first.
+setopt MENU_COMPLETE                       # On an ambiguous completion, instead of listing possibilities or beeping, insert the first match immediately.
 
 fpath=(~/.config/zsh/.zsh/completions /usr/share/zsh/site-functions $fpath)
 
