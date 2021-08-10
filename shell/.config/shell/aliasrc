@@ -4,6 +4,11 @@
 # Global Aliases
 alias -g G="| grep"
 alias -g L="| zless"
+alias -g H="| head"
+alias -g T="| tail"
+alias -g S="| sort"
+alias -g X="| xargs"
+alias -g PIPE="|"
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
@@ -62,6 +67,7 @@ alias \
   c=clear \
   rmf="\rm -rf" \
   mkd=mkdir \
+  rd="rmdir" \
   cpv='rsync -ah --info=progress2' \
   h=history \
   hs="history | rg" \
