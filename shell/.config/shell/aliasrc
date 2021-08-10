@@ -56,7 +56,6 @@ alias \
   nf=neofetch \
   n="nnn -deo" \
   ddg="ddgr --colorize=auto" \
-  fs=flameshot \
 	za="$READER" \
   e="$EDITOR" \
 	v="$EDITOR" \
