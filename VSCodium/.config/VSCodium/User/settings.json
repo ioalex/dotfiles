@@ -1,0 +1,347 @@
+{
+  // General Settings
+  // Startup
+  "workbench.welcome.enabled": false,
+  "workbench.startupEditor": "newUntitledFile",
+
+  // Titles
+  "window.title": "${rootPath}${separator}${appName}",
+  "window.titleBarStyle": "custom",
+
+  "files.hotExit": "onExitAndWindowClose",
+  "window.restoreWindows": "all",
+  "workbench.activityBar.visible": true,
+  "workbench.statusBar.visible": true,
+  "workbench.sideBar.location": "left",
+  "explorer.enableDragAndDrop": true,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": true,
+  "explorer.compactFolders": false,
+  "workbench.editor.closeOnFileDelete": false,
+  "editor.renderLineHighlight": "gutter",
+  "workbench.editor.labelFormat": "short",
+
+  "editor.renderIndentGuides": true,
+
+  // Fonts
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'FiraCode Nerd Font', Hasklig, Consolas, Inconsolata, 'UbuntoMono Nerd Font', Cascadia Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": true,
+  "workbench.fontAliasing": "default",
+  "workbench.colorCustomizations": {
+    "[Material Theme Darker High Contrast]": {}
+  },
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Explorer
+  "explorer.sortOrder": "type",
+  "files.exclude": {
+    ".history": true,
+    "**/*.build": true,
+    "**/*.err": true,
+    "**/*.rec": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*._*": true,
+    "**/coverage": true,
+    "**/node_modules": true
+  },
+
+  // Search
+  "search.useReplacePreview": false,
+  "search.exclude": {
+    "**/.meteor/local": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/public_gen": true
+  },
+
+  // Editor
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.autoClosingBrackets": "languageDefined",
+  "editor.autoClosingOvertype": "auto",
+  "editor.autoClosingQuotes": "languageDefined",
+  "editor.autoSurround": "languageDefined",
+  "editor.matchBrackets": "always",
+  "editor.autoIndent": "full",
+  "editor.colorDecorators": true,
+  "editor.columnSelection": false,
+  "editor.copyWithSyntaxHighlighting": true,
+  "editor.comments.ignoreEmptyLines": true,
+  "editor.comments.insertSpace": true,
+  "editor.definitionLinkOpensInPeek": false,
+  "editor.emptySelectionClipboard": true,
+
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.quickSuggestionsDelay": 10,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.tabCompletion": "on",
+  "editor.suggest.localityBonus": true,
+  "editor.suggestSelection": "first",
+  "editor.wordBasedSuggestions": true,
+  "editor.parameterHints.enabled": true,
+  "editor.parameterHints.cycle": true,
+
+  // Cursor
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorWidth": 2,
+  "editor.cursorSurroundingLines": 5,
+  "editor.cursorSurroundingLinesStyle": "default",
+
+  "editor.folding": true,
+  "editor.foldingStrategy": "indentation",
+  "editor.showFoldingControls": "mouseover",
+  "editor.trimAutoWhitespace": true,
+  "editor.scrollBeyondLastLine": false,
+
+  "files.encoding": "utf8",
+  "editor.wordWrap": "on",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.snippetSuggestions": "top",
+  "editor.renderWhitespace": "trailing",
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.lineNumbers": "on",
+  "editor.rulers": [80, 120],
+  "editor.smoothScrolling": true,
+  "editor.codeLens": false,
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.filePath": "on",
+  "breadcrumbs.icons": true,
+  "breadcrumbs.symbolPath": "on",
+  "breadcrumbs.symbolSortOrder": "position",
+  "editor.minimap.enabled": true,
+  "editor.minimap.size": "fit",
+  "editor.minimap.maxColumn": 120,
+  "editor.minimap.renderCharacters": true,
+  "editor.minimap.scale": 1,
+  "editor.minimap.showSlider": "mouseover",
+  "editor.minimap.side": "right",
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  },
+  "editor.codeActionsOnSaveTimeout": 1000,
+
+  "diffEditor.codeLens": false,
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.maxComputationTime": 0,
+  "diffEditor.renderIndicators": true,
+
+  "editor.accessibilitySupport": "auto",
+  "editor.accessibilityPageSize": 10,
+
+  // Formatting
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
+  "javascript.preferences.quoteStyle": "double",
+  "typescript.preferences.quoteStyle": "double",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  // Integrated Terminal
+  // Fonts
+  // Adapted from https://gist.github.com/kevin-smets/8568070
+  // and https://gist.github.com/480/3b41f449686a089f34edb45d00672f28
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "terminal.integrated.fontSize": 14,
+
+  "terminal.external.windowsExec": "C:\\Users\\alex\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
+  "terminal.external.osxExec": "Alacritty.app",
+  "terminal.external.linuxExec": "kitty",
+  "terminal.integrated.profiles.linux": {
+    "zsh (login)": {
+      "path": "/usr/bin/zsh",
+      "args": ["-l"]
+    }
+  },
+
+  // "terminal.integrated.shell.osx": "/usr/bin/zsh",
+  "terminal.integrated.inheritEnv": false,
+  "terminal.explorerKind": "external",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.enableBold": true,
+  "terminal.integrated.rightClickCopyPaste": true,
+
+  // Language Specific
+  // HTML5
+  "html.autoClosingTags": true,
+  "html.suggest.html5": true,
+  "html.validate.scripts": true,
+  "html.validate.styles": true,
+  "[html]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[nunjucks]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "scss.completion.completePropertyWithSemicolon": true,
+  "scss.completion.triggerPropertyValueCompletion": true,
+  "[scss]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "[less]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+  "[jsonc]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "[yaml]": {
+    "editor.autoIndent": "keep",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[shellscript]": {
+    "files.eol": "\n"
+  },
+  "[git-commit]": {
+    "editor.rulers": [72]
+  },
+  "emmet.includeLanguages": {
+    "nunjucks": "html",
+    "njk": "html",
+    "markdown": "html"
+  },
+  "files.associations": {
+    "*.html": "html",
+    "*.njk": "nunjucks",
+    ".stylelintrc": "json",
+    ".prettierrc": "json"
+  },
+
+  // Task Detection
+  "typescript.tsc.autoDetect": "on",
+  "grunt.autoDetect": "on",
+  "jake.autoDetect": "on",
+  "gulp.autoDetect": "on",
+  "npm.autoDetect": "on",
+
+  // Python
+  "python.languageServer": "Microsoft",
+  "python.pythonPath": "/usr/local/opt/python@3.8/bin/python3",
+
+  // Git
+  "git.enabled": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autoStash": true,
+  "git.autofetch": true,
+  "git.autorefresh": true,
+  "git.postCommitCommand": "push",
+  "git.autoRepositoryDetection": true,
+  "git.allowForcePush": false,
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.alwaysSignOff": false,
+
+  // Disable Telemetry
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+
+  "http.proxy": "",
+  "http.proxyAuthorization": null,
+  "http.proxyStrictSSL": true,
+  "http.proxySupport": "override",
+  "http.systemCertificates": true,
+
+  // Extensions Settings
+  "extensions.autoCheckUpdates": true,
+  "extensions.autoUpdate": true,
+  "extensions.ignoreRecommendations": true,
+  "extensions.closeExtensionDetailsOnViewChange": false,
+
+  // Prettier
+  // Setting Prettier as default formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.eslintIntegration": true,
+
+  // ESLint
+  "eslint.alwaysShowStatus": true,
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": true,
+  //   "source.fixAll.stylelint": true
+  // },
+
+  // Material Icon Theme
+  "material-icon-theme.showUpdateMessage": false,
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.files.associations": {
+    ".stow-local-ignore": "../../../icons/gnu",
+    ".stow-global-ignore": "../../../icons/gnu",
+    ".stowrc": "../../../icons/gnu"
+  },
+
+  // Color Highlight
+  "color-highlight.markerType": "dot-before",
+
+  // Auto Close Tag
+  "auto-close-tag.SublimeText3Mode": true,
+
+  // Live Server
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  // cSpell
+  "cSpell.userWords": [
+    "Entrypoint",
+    "SVGs",
+    "browserslist",
+    "commitlint",
+    "crossorigin",
+    "dotfiles",
+    "htmlhint",
+    "preconnect",
+    "shellcheck",
+    "stylelint"
+  ],
+  "cSpell.enabled": true,
+  "projectManager.git.baseFolders": [
+    "~/Projects/Command-Line",
+    "~/Projects/Config",
+    "~/Projects/GitHub",
+    "~/Projects/Python",
+    "~/Projects/Vim-Plugins",
+    "~/Projects/VSCode-Extensions",
+    "~/Projects/Web-Development"
+  ],
+  "vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration",
+  "workbench.colorTheme": "Dracula",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  }
+}
