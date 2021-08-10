@@ -1,0 +1,10 @@
+# shellcheck shell=bash
+
+# Source: <https://github.com/maximbaz/dotfiles/blob/master/.zsh-aliases>
+
+# Clone git repositories recursively and then cd.
+
+gcl() {
+    hub clone --recursive "$@"
+    cd -- "${${${@: -1}##*/}%*.git}"
+}
