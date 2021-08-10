@@ -28,10 +28,23 @@
 	helper = store
 
 [delta]
+  features = decorations
   plus-style = "syntax #012800"
   minus-style = "syntax #340001"
   syntax-theme = Monokai Extended
   navigate = true
+
+[delta "interactive"]
+  keep-plus-minus-markers = false
+
+[delta "decorations"]
+  commit-decoration-style = blue ol
+  commit-style = raw
+  file-style = omit
+  hunk-header-decoration-style = blue box
+  hunk-header-file-style = red
+  hunk-header-line-number-style = "#067a00"
+  hunk-header-style = file line-number syntax
 
 [diff]
   tool = delta
@@ -70,7 +83,7 @@
   templatedir = ~/.config/git/templates
 
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = delta --color-only --features=interactive
 
 [log]
   abbrevCommit = true
