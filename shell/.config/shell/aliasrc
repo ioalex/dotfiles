@@ -13,14 +13,16 @@ alias -g L="| less"
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
 
 # Verbosity and settings that you pretty much just always are going to want.
+# nocorrect: disables zsh auto-correct
 alias \
 	cp="cp -iv" \
-	mv="mv -iv" \
-  mkdir="mkdir -pv" \
+	mv="nocorrect mv -iv" \
+  mkdir="nocorrect mkdir -pv" \
   ln="ln -i" \
 	rm="rm -vI --preserve-root" \
   trash="trash -iv" \
   autotrash="autotrash -v" \
+  man="nocorrect man" \
   exa="exa --icons --color=auto" \
   nnn="nnn -H" \
   df=duf \
@@ -28,12 +30,13 @@ alias \
 	bc="bc -ql" \
   mount="mount | column -t" \
   jobs="jobs -l" \
-  chown="chown -v --preserve-root" \
-  chmod="chmod -v --preserve-root" \
-  chgrp="chgrp -v --preserve-root" \
+  chown="nocorrect chown -v --preserve-root" \
+  chmod="nocorrect chmod -v --preserve-root" \
+  chgrp="nocorrect chgrp -v --preserve-root" \
   uptime="uptime -p" \
   rsync="rsync -v" \
-  wget="wget -c"
+  wget="wget -c"  \
+  cargo="nocorrect cargo"
   # gpg="gpg --homedir ${XDG_DATA_HOME:="$HOME/.local/share"}/gnupg"
 
 # Colorize these commands when possible.
@@ -44,6 +47,7 @@ alias \
 
 # These common commands are just too long! Abbreviate them.
 alias \
+  d="dirs -v" \
   c=clear \
   rmf="\rm -rf" \
   mkd=mkdir \
@@ -123,7 +127,7 @@ alias \
   cat=bat \
   please=sudo \
   pls=sudo \
-  git=hub \
+  git="nocorrect hub" \
   nano=micro \
   rn=rename \
   find=fd \

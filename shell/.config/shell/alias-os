@@ -43,6 +43,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
   # Brew commands
   alias \
+    brew="nocorrect brew" \
     b=brew \
     br=brew \
     bs="brew search" \
