@@ -7,39 +7,86 @@
 # Disable system-wide zshrc from running compinit - as we will have our own compinit startup code - Ubuntu does this.
 skip_global_compinit=1
 
+function command_exists() {
+  command -v $1 &> /dev/null
+}
+
 # Setup environment
 
 # Set locale / languages
 export LANG=en_US.UTF-8
 export \
-  LANGUAGE=$LANG \
-  LC_ALL=$LANG \
-  LC_COLLATE=$LANG \
-  LC_CTYPE=$LANG \
-  LC_MONETARY=$LANG \
-  LC_NUMERIC=$LANG \
-  LC_TIME=$LANG \
-  LESSCHARSET=utf-8
+  LANGUAGE="$LANG" \
+  LC_ALL="$LANG" \
+  LC_COLLATE="$LANG" \
+  LC_CTYPE="$LANG" \
+  LC_MONETARY="$LANG" \
+  LC_NUMERIC="$LANG" \
+  LC_TIME="$LANG"
+
+if command_exists less; then
+  export LESSCHARSET=utf-8
+fi
 
 # Terminal
-export \
-  TERM="xterm-256color" \
-  TERMINAL="kitty"
+export TERM="xterm-256color" \
+
+if command_exists kitty; then
+  export TERMINAL=kitty
+elif command_exists alacritty; then
+  export TERMINAL=alacritty
+fi
 
 # Set Editor Defaults
-export EDITOR="nvim"
-export \
-  VEDITOR=$EDITOR \
-  VISUAL=$EDITOR \
-  CODEEDITOR="vscodium"
+
+if command_exists nvim; then
+  export VISUAL=nvim
+elif command_exists vim; then
+  export VISUAL=vim
+elif command_exists micro; then
+  export VISUAL=micro
+elif command_exists nano; then
+  export VISUAL=nano
+fi
+
+if [ -z ${VISUAL+x} ]; then
+  echo "$VISUAL is not set."
+else
+  export \
+    VEDITOR="$VISUAL" \
+    EDITOR="$VISUAL"
+fi
+
+# VSCode or VSCodium
+
+if ! command_exists code; then
+  export CODEEDITOR=codium
+else
+  export CODEEDITOR=code
+fi
+
+# Set Pagers
+
+if command_exists bat; then
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+elif command_exists nvim; then
+  export MANPAGER="nvim -c 'set ft=man' -"
+fi
+
+if command_exists bat; then
+  export PAGER=bat
+elif command_exists less; then
+  export PAGER=less
+elif command_exists more; then
+  export PAGER=more
+fi
 
 # Set other application defaults
+
 export \
-  MANPAGER="sh -c 'col -bx | bat -l man -p'" \
-  PAGER="bat" \
-  BROWSER="brave" \
-  READER="zathura" \
-  WM="i3"
+  BROWSER=brave \
+  READER=zathura \
+  WM=i3
 
 # See: <https://www.reddit.com/r/zsh/comments/luoicb/zshenv_doesnt_export_variables_and_has_a_weird/>
 
