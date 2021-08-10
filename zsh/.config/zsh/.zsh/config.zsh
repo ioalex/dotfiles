@@ -23,6 +23,7 @@ setopt CORRECT                            # Try to correct the spelling of comma
 setopt CORRECT_ALL                        # Try to correct the spelling of all arguments in a line.
 setopt NO_FLOW_CONTROL                    # Disable output flow control via start/stop characters (usually assigned to ^S/^Q).
 setopt INTERACTIVE_COMMENTS               # Enable comments in an interactive shell.
+setopt SHORT_LOOPS                        # Allow the short forms of for, repeat, select, if, and function constructs.
 
 # Job Control
 setopt NO_BG_NICE                         # Prevent background jobs being given a lower priority.
@@ -36,6 +37,7 @@ setopt PROMPT_SUBST                       # Allow parameter expansion, command s
 setopt TRANSIENT_RPROMPT                  # Remove any right prompt from display when accepting a command line. This may be useful with terminals with other cut/paste methods.
 
 # Scripts and Functions
+setopt FUNCTION_ARGZERO                   # When executing a shell function or sourcing a script, set $0 temporarily to the name of the function/script.
 setopt MULTIOS                            # Perform implicit tees or cats when multiple redirections are attempted.
 
 # Shell Emulation
