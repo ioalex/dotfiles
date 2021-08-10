@@ -13,6 +13,8 @@ function command_exists() {
 
 # Setup environment
 
+[[ "x86_64" == "$(uname -m)" ]] && export ARCHFLAGS="-arch x86_64 ${ARCHFLAGS}"
+
 # Set locale / languages
 export LANG=en_US.UTF-8
 export \
@@ -26,6 +28,7 @@ export \
 
 if command_exists less; then
   export LESSCHARSET=utf-8
+  export READNULLCMD=less
 fi
 
 # Terminal
