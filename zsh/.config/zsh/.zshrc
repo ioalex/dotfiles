@@ -24,6 +24,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Autoloads
+autoload -U colors && colors
+autoload zmv
+
 # Source environment variables
 env_files=(~/.config/shell/**/*.env)
 for file in "${env_files[@]}"; do
