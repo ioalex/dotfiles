@@ -100,7 +100,7 @@ alias \
   cpu="lscpu"
 
 # VSCode or VSCodium
-if ! command -v code /dev/null 2>&1; then
+if [ "$CODEEDITOR"=codium ]; then
   alias \
     code="$CODEEDITOR" \
     vscode="$CODEEDITOR"
