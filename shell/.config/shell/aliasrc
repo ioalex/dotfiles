@@ -57,7 +57,6 @@ alias \
 
 # Colorize these commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
 
@@ -173,14 +172,24 @@ alias \
   cd..='..' \
   cd...='...' \
   cd....='....' \
-  ls="exa -Fa --icons --color=auto --group-directories-first --git" \
-  ld="exa -F --icons --color=auto --group-directories-first --git" \
-  la="exa -Fal --icons --color=auto --group-directories-first --git" \
-  ll="exa -Fal --icons --color=auto --group-directories-first --git" \
-  lt="\ls --human-readable --size -1 -S --classify -a --color=auto" \
-  l.='exa -a | egrep "^\."' \
   trees=br \
   cg=cd-gitroot
+
+if command -v exa &> /dev/null; then
+  alias \
+    ls="exa -Fa --icons --color=auto --group-directories-first --git" \
+    ld="exa -F --icons --color=auto --group-directories-first --git" \
+    la="exa -Fal --icons --color=auto --group-directories-first --git" \
+    ll="exa -Fal --icons --color=auto --group-directories-first --git" \
+    lt="\ls --human-readable --size -1 -S --classify -a --color=auto" \
+    l.='exa -a | egrep "^\."'
+else
+  alias \
+    ls="ls -hN --color=auto --group-directories-first" \
+    la="ls -A" \
+    l="ls -CF" \
+    ll="ls -alF"
+fi
 
 # Directory Shortcuts
 alias \
