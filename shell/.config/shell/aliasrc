@@ -40,7 +40,7 @@ alias \
   chgrp="nocorrect chgrp -v --preserve-root" \
   uptime="uptime -p" \
   rsync="rsync -v" \
-  wget="wget -c"  \
+  wget='wget -c --hsts-file="$XDG_CACHE_HOME/wget-hsts"'  \
   cargo="nocorrect cargo"
   # gpg="gpg --homedir ${XDG_DATA_HOME:="$HOME/.local/share"}/gnupg"
 
@@ -98,7 +98,7 @@ alias \
 	pman="sudo pacman" \
   upac="yay -Syu --noconfirm" \
   get="yay -S" \
-  plist="pacman -Qe | awk '{print $1}' > ~/dotfiles/.pacman.list" \
+  plist="pacman -Qe | awk '{print $1}' > ~/dotfiles/@arch/.config/.pacman.list" \
   orphan="sudo pacman -Qtdq" \
   distro="bat /etc/*-release" \
   sha="shasum -a 256 " \
