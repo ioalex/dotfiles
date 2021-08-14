@@ -89,6 +89,7 @@ fi
 
 export \
   BROWSER=brave \
+  FILE_MANAGER=nnn \
   READER=zathura \
   WM=i3
 

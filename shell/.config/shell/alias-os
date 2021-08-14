@@ -20,8 +20,7 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     lck="betterlockscreen --lock dim" \
     sdn="sudo shutdown -h now" \
     sleep="sudo systemctl suspend" \
-    zzz="sudo systemctl suspend" \
-    xbk='xbindkeys -f "$HOME/.config/xbindkeys/config"'
+    zzz="sudo systemctl suspend"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	alias \
     o=open \
