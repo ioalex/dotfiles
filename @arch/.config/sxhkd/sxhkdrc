@@ -17,6 +17,9 @@ super + shift + i
 super + comma
   $CODEEDITOR $DOTFILES
 
+super + t
+  todoist
+
 super + d
   rofi -show drun -show-icons
 
@@ -49,6 +52,32 @@ super + equal
 ctrl + period
   rofi -show emoji -modi emoji
 
+#------------------------------------------------------------------------------
+#----- SYSTEM
+#------------------------------------------------------------------------------
+
+#---------- NOTIFICATIONS
+
+F11
+	notify-send "DUNST_COMMAND_RESUME"
+
+F12
+	notify-send "DUNST_COMMAND_PAUSE"
+
+#---------- LOCKSCREEN
+
+super + shift + x
+  betterlockscreen -l dim
+~
+#---------- POWER DIALOG
+
+ctrl + shift + Escape
+  rofi -show powermenu -modi powermenu:rofi-power-menu
+
+#------------------------------------------------------------------------------
+#----- NETWORKING
+#------------------------------------------------------------------------------
+
 #---------- NETWORK SETTINGS
 
 super + Home
@@ -61,11 +90,6 @@ super + n
 
 super + b
   rofi-bluetooth
-
-#---------- LOCKSCREEN
-
-super + shift + x
-  betterlockscreen -l dim
 
 #------------------------------------------------------------------------------
 #----- i3 WINDOW MANAGER
