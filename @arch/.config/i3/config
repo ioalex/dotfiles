@@ -83,10 +83,6 @@ exec_always --no-startup-id autotiling
 
 exec_always --no-startup-id zsh $HOME/.config/polybar/launch.sh
 
-#---------- WINDOW SWITCHER
-
-exec --no-startup-id alttab -w 1 -d 1
-
 #---------- LOCATION SERVICES
 
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
