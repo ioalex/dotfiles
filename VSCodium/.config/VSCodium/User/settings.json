@@ -339,7 +339,7 @@
     "~/Projects/Web-Development"
   ],
   "vsintellicode.modify.editor.suggestSelection": "choseToUpdateConfiguration",
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
