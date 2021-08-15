@@ -4,6 +4,9 @@
 # zshoptions
 # Source: <https://zsh.sourceforge.io/Doc/Release/Options.html>
 
+# Treat these characters as part of a word.
+WORDCHARS='_-*?[]~&.;!#$%^(){}<>'
+
 # Changing Directories
 setopt AUTO_CD		                        # Automatically cd into typed directory.
 setopt AUTO_PUSHD                         # Make cd push the old directory onto the directory stack.
@@ -23,7 +26,10 @@ setopt NO_NOMATCH                         # Avoids "zsh: no matches found...".
 setopt CORRECT                            # Try to correct the spelling of commands.
 setopt CORRECT_ALL                        # Try to correct the spelling of all arguments in a line.
 setopt NO_FLOW_CONTROL                    # Disable output flow control via start/stop characters (usually assigned to ^S/^Q).
+setopt IGNORE_EOF                         # Do not exit on end-of-file. Require the use of exit or logout instead.
 setopt INTERACTIVE_COMMENTS               # Enable comments in an interactive shell.
+setopt NO_MAIL_WARNING                    # Disable warning messages if a mail file has been accessed since the shell last checked.
+setopt RC_QUOTES                          # Allow the character sequence ‘’’’ to signify a single quote within singly quoted strings.
 setopt SHORT_LOOPS                        # Allow the short forms of for, repeat, select, if, and function constructs.
 
 # Job Control
