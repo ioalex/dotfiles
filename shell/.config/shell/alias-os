@@ -20,7 +20,8 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     lck="betterlockscreen --lock dim" \
     sdn="sudo shutdown -h now" \
     sleep="sudo systemctl suspend" \
-    zzz="sudo systemctl suspend"
+    zzz="sudo systemctl suspend" \
+    mirror="sudo reflector --country au --latest 15 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	alias \
     o=open \
