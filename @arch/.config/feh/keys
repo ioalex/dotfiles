@@ -1,0 +1,13 @@
+# Image movement
+scroll_left  	H C-Left
+scroll_down  	J C-Down
+scroll_up    	K C-Up
+scroll_right 	L C-Right
+
+# Zooming
+zoom_in  	C-j
+zoom_out 	C-k
+
+# Image navigation
+prev_img 	h Left
+next_img 	l Right
