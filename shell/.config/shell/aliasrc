@@ -73,7 +73,6 @@ alias \
   :q=exit \
   ch=cheat \
   r=ranger \
-  nf=neofetch \
   n="nnn -deo" \
   ddg="ddgr --colorize=auto" \
 	za="$READER" \
@@ -83,6 +82,8 @@ alias \
   svi="sudo $EDITOR" \
   edit="$EDITOR" \
   m=micro \
+  neofetch="neofetch --kitty --size 320 --source ~/dotfiles/neofetch/.config/neofetch/img.jpeg" \
+  nf=neofetch \
   1f=onefetch \
   of=onefetch \
   caff=caffeinate \
@@ -189,11 +190,23 @@ if command -v exa &> /dev/null; then
     lt="\ls --human-readable --size -1 -S --classify -a --color=auto" \
     l.='exa -a | egrep "^\."'
 else
-  alias \
-    ls="ls -hN --color=auto --group-directories-first" \
-    la="ls -A" \
-    l="ls -CF" \
-    ll="ls -alF"
+  if ls --color > /dev/null 2>&1; then
+    # GNU `ls`
+    export colorflag="--color"
+    alias \
+      ls="ls -hN --color=auto --group-directories-first" \
+      la="ls -A" \
+      l="ls -CF" \
+      ll="ls -alF"
+  else
+    # macOS `ls`
+    export colorflag="-G"
+    alias \
+      ls="ls -hNG --group-directories-first" \
+      la="ls -AG" \
+      l="ls -CFG" \
+      ll="ls -alFG"
+  fi
 fi
 
 # Directory Shortcuts
