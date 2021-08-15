@@ -1,5 +1,6 @@
 # vim:ft=zsh
 # shellcheck shell=bash
+# shellcheck disable=SC2034
 
 # zshoptions
 # Source: <https://zsh.sourceforge.io/Doc/Release/Options.html>
