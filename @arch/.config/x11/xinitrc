@@ -17,4 +17,6 @@ else
 	. "$HOME/.xprofile"
 fi
 
-exec i3
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec i3
+fi
