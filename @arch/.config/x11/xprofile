@@ -29,8 +29,13 @@ numlockx &          # toggle Numlock on
 # redshift &        # adjusts the color temperature of your screen according to surroundings
 autolock &          # sets a screensaver and locks the system when it timesout
 xbanish &           # hide mouse cursor when using keyboard
-dunst &			        # dunst for notifications
+# dunst &			        # dunst for notifications
 greenclip daemon &  # spawn greenclip daemon - clipboard manager
+
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/dunst/launch.sh" ]; then
+    # shellcheck source=/dev/null
+	. "${XDG_CONFIG_HOME:-$HOME/.config}/dunst/launch.sh"
+fi
 
 # This line autostarts an instance of Pulseaudio that does not exit on idle.
 # This is "necessary" on Artix due to a current bug between PA and
