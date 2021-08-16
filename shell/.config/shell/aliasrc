@@ -24,6 +24,7 @@ alias \
 	mv="nocorrect mv -iv" \
   mkdir="nocorrect mkdir -pv" \
   ln="ln -i" \
+  type="type -a" \
 	rm="rm -vI --preserve-root" \
   trash="trash -iv" \
   autotrash="autotrash -v" \
