@@ -6,7 +6,7 @@ super + Return
   $TERMINAL
 
 super + f
-  $TERMINAL -e $FILE_MANAGER
+  $TERMINAL -e $FILE_MANAGER -Hdex
 
 super + e
   $TERMINAL -e $VISUAL
