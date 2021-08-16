@@ -98,10 +98,6 @@ alias \
   root="sudo su -" \
   ffs="sudo !!" \
 	pman="sudo pacman" \
-  upac="yay -Syu --noconfirm" \
-  get="yay -S" \
-  plist="pacman -Qe | awk '{print $1}' > ~/dotfiles/@arch/.config/.pacman.list" \
-  orphan="sudo pacman -Qtdq" \
   distro="bat /etc/*-release" \
   sha="shasum -a 256 " \
   vpn=nordvpn \

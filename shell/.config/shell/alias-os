@@ -16,6 +16,10 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     pbpaste="xclip -selection clipboard -out" \
     st=speedtest++ \
     speedtest=speedtest++ \
+    upac="yay -Syu --noconfirm" \
+    get="yay -S" \
+    plist="pacman -Qe | awk '{print $1}' > ~/dotfiles/@arch/.config/.pacman.list ;echo 'updated ~/.config/.pacman.list'" \
+    orphan="sudo pacman -Qtdq" \
     gpu="grep -i memory /var/log/Xorg.0.log" \
     lck="betterlockscreen --lock dim" \
     sdn="sudo shutdown -h now" \
