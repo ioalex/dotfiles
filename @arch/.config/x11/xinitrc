@@ -18,5 +18,5 @@ else
 fi
 
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec i3
+  exec i3 -V -d all &>> "${XDG_CACHE_HOME:="$HOME/.cache"}/i3.log"
 fi
