@@ -82,7 +82,3 @@ exec_always --no-startup-id autotiling
 #---------- BAR
 
 exec_always --no-startup-id zsh $HOME/.config/polybar/launch.sh
-
-#---------- LOCATION SERVICES
-
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent

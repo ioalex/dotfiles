@@ -60,7 +60,7 @@ i3-gaps 4.19.1-1
 imagemagick 7.1.0.4-2
 inetutils 2.1-1
 jq 1.6-4
-kitty 0.22.2-1
+kitty 0.23.1-1
 lazygit 0.28.2-1
 libtool 2.4.6+42+gb88cebd5-16
 linux 5.13.10.arch1-1
@@ -68,7 +68,8 @@ linux-firmware 20210716.b7c134f-1
 linux-headers 5.13.10.arch1-1
 lnav-git 0.10.0.beta1.r12.g6c6a5c11-1
 luajit 2.0.5-3
-lvm2 2.03.12-1
+luarocks 3.7.0-1
+lvm2 2.03.13-1
 ly 0.5.2-2
 m4 1.4.19-1
 make 4.3-3
@@ -82,7 +83,6 @@ nano 5.8-1
 neofetch 7.1.0-2
 nerd-fonts-complete 2.1.0-6
 netctl 1.25-1
-network-manager-applet 1.22.0-1
 networkmanager 1.32.8-1
 networkmanager-dmenu-git r141.78c8a78-1
 nnn 4.2-1
@@ -108,7 +108,8 @@ polybar 3.5.6-1
 procs 0.11.9-1
 pulseaudio-bluetooth 15.0-1
 python-pip 20.3.4-1
-redshift 1.12-4
+python2-pip 20.3.4-1
+redshift-minimal 1.12-3
 reflector 2021.7.8-1
 ripgrep 13.0.0-2
 rofi 1.6.1-1
@@ -121,7 +122,7 @@ rust 1:1.54.0-1
 scrot 1.6-2
 sd 0.7.6-1
 shellcheck 0.7.2-36
-snapd 2.51.3-2
+snapd 2.51.4-1
 speedtest++ 1.14.r68.1877803-1
 spotify 1:1.1.56.595-1
 spotify-tui 0.24.0-1
