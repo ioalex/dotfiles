@@ -9,9 +9,7 @@
 !nnn/.config/nnn/plugins
 
 # Specifics
-redshift.conf
 npmrc
-redshift.env
 npm.env
 
 # Backups
