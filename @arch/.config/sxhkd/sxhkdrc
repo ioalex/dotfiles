@@ -63,6 +63,11 @@ ctrl + period
 #----- SYSTEM
 #------------------------------------------------------------------------------
 
+#---------- TOGGLE; ADJUST SCREEN COLOR TEMPERATURE
+
+super + shift + t
+  pkill -USR1 redshift && notify-send "redshift: toggle"
+
 #---------- NOTIFICATIONS
 
 F11

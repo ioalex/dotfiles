@@ -32,6 +32,11 @@ xbanish &           # hide mouse cursor when using keyboard
 # dunst &			        # dunst for notifications
 greenclip daemon &  # spawn greenclip daemon - clipboard manager
 
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/redshift/launch.sh" ]; then
+    # shellcheck source=/dev/null
+	. "${XDG_CONFIG_HOME:-$HOME/.config}/redshift/launch.sh"
+fi
+
 if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/dunst/launch.sh" ]; then
     # shellcheck source=/dev/null
 	. "${XDG_CONFIG_HOME:-$HOME/.config}/dunst/launch.sh"
