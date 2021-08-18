@@ -42,6 +42,11 @@ if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/dunst/launch.sh" ]; then
 	. "${XDG_CONFIG_HOME:-$HOME/.config}/dunst/launch.sh"
 fi
 
+# Set default power profile: balanced mode
+if command -v powerprofilesctl &> /dev/null; then
+  powerprofilesctl set balanced
+fi
+
 # This line autostarts an instance of Pulseaudio that does not exit on idle.
 # This is "necessary" on Artix due to a current bug between PA and
 # Chromium-based browsers where they fail to start PA and use dummy output.

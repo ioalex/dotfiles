@@ -105,6 +105,7 @@ picom 8.2-1
 pkgconf 1.7.3-1
 plymouth 0.9.5-7
 polybar 3.5.6-1
+power-profiles-daemon 0.9.0-2
 procs 0.11.9-1
 pulseaudio-bluetooth 15.0-1
 python-pip 20.3.4-1
