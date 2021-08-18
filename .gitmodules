@@ -16,3 +16,9 @@
 [submodule "@osx/Alfred/Alfred.alfredpreferences"]
 	path = @osx/Alfred/Alfred.alfredpreferences
 	url = https://github.com/ioalex/Alfred.alfredpreferences.git
+[submodule "kitty/.config/kitty/themes/gruvbox-material"]
+	path = kitty/.config/kitty/themes/gruvbox-material
+	url = https://github.com/rsaihe/gruvbox-material-kitty
+[submodule "kitty/.config/kitty/themes/gruvbox"]
+	path = kitty/.config/kitty/themes/gruvbox
+	url = https://github.com/wdomitrz/kitty-gruvbox-theme
