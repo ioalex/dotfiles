@@ -26,6 +26,14 @@ elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     sleep="sudo systemctl suspend" \
     zzz="sudo systemctl suspend" \
     mirror="sudo reflector --country au --latest 15 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose"
+
+  if command -v powerprofilesctl &> /dev/null; then
+  alias \
+    pp=powerprofilesctl \
+    ppb="powerprofilesctl set balanced" \
+    pps="powerprofilesctl set power-saver"
+  fi
+
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	alias \
     o=open \
