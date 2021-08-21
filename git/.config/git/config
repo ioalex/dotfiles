@@ -25,7 +25,7 @@
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
 [credential]
-	helper = store
+	helper = store --file ~/.local/share/git/git-credentials
 
 [delta]
   features = decorations
@@ -126,3 +126,7 @@
 
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+
+[url "git@gitlab.com:"]
+    insteadOf = "gl:"
+    pushInsteadOf = "gl:"
