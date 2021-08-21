@@ -8,32 +8,28 @@ if [[ $UNAMECHECK == *[mM]"icrosoft"* ]] && [[ "$OSTYPE" == "linux-gnu"* ]]; the
     open=explorer.exe \
     st=speedtest-cli \
     speedtest=speedtest-cli
+
+  # Source Linux distro-specific aliases
+  if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias-distro" ]; then
+    # shellcheck source=/dev/null
+	  . "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias-distro"
+  fi
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	alias \
     o=xdg-open \
     open=xdg-open \
     pbcopy="xclip -selection clipboard -in" \
     pbpaste="xclip -selection clipboard -out" \
-    st=speedtest++ \
-    speedtest=speedtest++ \
-    upac="yay -Syu --noconfirm" \
-    get="yay -S" \
-    plist="pacman -Qe | awk '{print $1}' > ~/dotfiles/@arch/.config/.pacman.list ;echo 'updated ~/.config/.pacman.list'" \
-    orphan="sudo pacman -Qtdq" \
     gpu="grep -i memory /var/log/Xorg.0.log" \
-    lck="betterlockscreen --lock dim" \
     sdn="sudo shutdown -h now" \
     sleep="sudo systemctl suspend" \
-    zzz="sudo systemctl suspend" \
-    mirror="sudo reflector --country au --latest 15 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose"
+    zzz="sudo systemctl suspend"
 
-  if command -v powerprofilesctl &> /dev/null; then
-  alias \
-    pp=powerprofilesctl \
-    ppb="powerprofilesctl set balanced" \
-    pps="powerprofilesctl set power-saver"
+  # Source Linux distro-specific aliases
+  if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias-distro" ]; then
+    # shellcheck source=/dev/null
+	  . "${XDG_CONFIG_HOME:-$HOME/.config}/shell/alias-distro"
   fi
-
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 	alias \
     o=open \

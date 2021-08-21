@@ -1,0 +1,26 @@
+# Linux distro-specific aliases
+
+if [ -f "/etc/os-release" ]; then
+  source /etc/os-release
+else
+  echo "/etc/os-release not available."
+fi
+
+if [[ "$NAME" == *"Arch Linux"* ]]; then
+  alias \
+    st=speedtest++ \
+    speedtest=speedtest++ \
+    upac="yay -Syu --noconfirm" \
+    get="yay -S" \
+    plist="pacman -Qe | awk '{print $1}' > ~/dotfiles/@arch/.config/.pacman.list ;echo 'updated ~/.config/.pacman.list'" \
+    orphan="sudo pacman -Qtdq" \
+    mirror="sudo reflector --country au --latest 15 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose" \
+    lock="betterlockscreen --lock dim" \
+
+  if command -v powerprofilesctl &> /dev/null; then
+  alias \
+    pp=powerprofilesctl \
+    ppb="powerprofilesctl set balanced" \
+    pps="powerprofilesctl set power-saver"
+  fi
+fi
