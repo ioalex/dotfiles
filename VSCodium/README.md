@@ -3,8 +3,8 @@
 ```text
 ~
 └── .config/VSCodium/User
-    ├── keybindings.json          vscodium keybindings config.
-    └── settings.json             vscodium config.
+    ├── keybindings.json          VSCodium keybindings config.
+    └── settings.json             VSCodium config.
 
 ```
 

@@ -3,7 +3,7 @@
 ```text
 ~
 └── .config/tmux
-    ├── plugins/*                 plugins managed by tpm
+    ├── plugins/*                 Plugins managed by tpm
     ├── tmux.conf                 tmux config.
     └── tpm.sh                    tpm installer
 
