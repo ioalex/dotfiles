@@ -10,6 +10,8 @@
   - [Arch Linux](#arch-linux)
   - [Mac OSX](#mac-osx)
   - [Windows 10 & WSL2](#windows-10--wsl2)
+- [Colorscheme](#colorscheme)
+  - [Gruvbox](#gruvbox)
 - [Quickstart](#quickstart)
 - [Wiki](#wiki)
 - [Inspiration](#inspiration)
@@ -53,6 +55,18 @@ I primarily use and prefer [Z Shell (zsh)](https://www.zsh.org/), but occasional
 - **App Launcher**: [PowerToys](https://github.com/microsoft/PowerToys)
 - **Terminal**: [Windows Terminal](https://github.com/Microsoft/Terminal)
 
+## Colorscheme
+
+I really like [gruvbox](https://github.com/morhetz/gruvbox). I also really like gruvbox variants such as [gruvbox-material](https://github.com/sainnhe/gruvbox-material). I feel like the gruvbox colours are very friendly to the eyes, and even more so when paired with [redshift](https://github.com/jonls/redshift).
+
+### Gruvbox
+
+- **kitty**: [gruvbox-material-kitty](https://github.com/rsaihe/gruvbox-material-kitty) (dark medium)
+- **nvim**: [gruvbox-material](https://github.com/sainnhe/gruvbox-material) (soft)
+- **vscodium**: [Gruvbox Dark Medium](https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox)
+- **bat**: gruvbox-dark
+- **Wallpaper**: [Unsplash](https://unsplash.com/photos/Etpd8Le6b8E)
+
 ## Quickstart
 
 Install GNU Stow:
@@ -93,6 +107,7 @@ Please see the [wiki](https://github.com/ioalex/dotfiles/wiki) for more in-depth
 - [huyvohcmc/dotfiles](https://github.com/huyvohcmc/dotfiles)
 - [aeolyus/dotfiles](https://github.com/aeolyus/dotfiles)
 - [xero/dotfiles](https://github.com/xero/dotfiles)
+- [georgijd/dotfiles](https://github.com/georgijd/dotfiles)
 
 ```text
     .--.
