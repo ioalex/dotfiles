@@ -1,4 +1,4 @@
-# Zsh
+# wget
 
 ```text
 └── .config/wget
