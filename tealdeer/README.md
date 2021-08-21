@@ -1,6 +1,7 @@
 # tealdeer
 
 ```text
+~
 └── .config/tealdeer
     └── config.toml               tealdeer config. file
 

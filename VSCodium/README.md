@@ -1,6 +1,7 @@
 # VSCodium
 
 ```text
+~
 └── .config/VSCodium/User
     ├── keybindings.json          vscodium keybindings config.
     └── settings.json             vscodium config.

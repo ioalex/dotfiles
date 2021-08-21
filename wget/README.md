@@ -1,6 +1,7 @@
 # wget
 
 ```text
+~
 └── .config/wget
     └── wgetrc                    wget main configuration file
 ```

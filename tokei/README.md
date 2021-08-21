@@ -1,6 +1,7 @@
 # tokei
 
 ```text
+~
 └── .config
     └── tokei.toml                tokei config. file
 

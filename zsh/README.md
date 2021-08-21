@@ -1,6 +1,7 @@
 # Zsh
 
 ```text
+~
 ├── .config/zsh/
 │   ├── .zsh/
 │   │   ├── completions/*         Contains various completion files

@@ -1,6 +1,7 @@
 # tmux
 
 ```text
+~
 └── .config/tmux
     ├── plugins/*                 plugins managed by tpm
     ├── tmux.conf                 tmux config.
