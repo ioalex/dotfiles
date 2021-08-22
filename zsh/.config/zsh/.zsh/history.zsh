@@ -16,10 +16,10 @@ setopt INC_APPEND_HISTORY                 # zsh sessions append to the history, 
 setopt SHARE_HISTORY                      # Share history between different instances of the shell.
 
 # Variables
-HISTFILE="$ZSH_HISTORY_DIR"/history
-HISTSIZE=50000
-SAVEHIST=$HISTSIZE
-HISTTIMEFORMAT="%T: "
+export HISTFILE="$ZSH_HISTORY_DIR"/history
+export HISTTIMEFORMAT="%Y/%m/%d %H:%M:%S:  "
+export HISTSIZE=50000
+export SAVEHIST=$HISTSIZE
 
 # Ignore interactive commands from history
 export HISTORY_IGNORE="(ls|pwd|exit|cd ..|clear|c)"
