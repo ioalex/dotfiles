@@ -35,15 +35,18 @@ alias \
 	bc="bc -ql" \
   mount="mount | column -t" \
   jobs="jobs -l" \
-  sudo="nocorrect sudo" \
   chown="nocorrect chown -v --preserve-root" \
   chmod="nocorrect chmod -v --preserve-root" \
   chgrp="nocorrect chgrp -v --preserve-root" \
   uptime="uptime -p" \
   rsync="rsync -v" \
   wget='wget -c --hsts-file="$XDG_CACHE_HOME/wget-hsts"'  \
-  cargo="nocorrect cargo"
+  youtube-dl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
   # gpg="gpg --homedir ${XDG_DATA_HOME:="$HOME/.local/share"}/gnupg"
+
+# nocorrect: disables zsh auto-correct
+for command in sudo cargo; \
+  alias $command="nocorrect $command"
 
 # Colorize these commands when possible.
 alias \
@@ -114,7 +117,8 @@ alias \
   ef="$EDITOR $SHELL_CONFIG/functions; source $SHELL_CONFIG/functions/*" \
   mem="free -m -l -t" \
   disk="df -h" \
-  cpu="lscpu"
+  cpu="lscpu" \
+  ytd="youtube-dl"
 
 # VSCode or VSCodium
 if [ "$CODEEDITOR"=codium ]; then
@@ -157,7 +161,7 @@ alias \
   egrep="grep --color=auto" \
   fgrep="fgrep --color=auto"
 
-if command -v exa &> /dev/null; then
+if command -v curlie &> /dev/null; then
   alias curl=curlie
 fi
 
@@ -238,25 +242,25 @@ alias \
   ggi="gitit issues" \
   ggs="gitit grep"
 
-# gb # Lists all git branches in current repository
-# gcb # Create new branch
-# gcm # Return to master/main branch
-# gdca # diff files that have been staged for commit
-# glog # Pretty git branch graph
+# gb - Lists all git branches in current repository
+# gcb - Create new branch
+# gcm - Return to master/main branch
+# gdca - diff files that have been staged for commit
+# glog - Pretty git branch graph
 
 # Tmux
 alias \
   tmux="tmux -f $TMUX_CONFIG" \
   tr="tmux source $TMUX_CONFIG" \
   t="tmux attach || tmux new-session\; split-window -h" \
-  tl="tmux list-sessions" \
   tn="tmux new -s" \
   ta="tmux attach -t" \
+  tl="tmux list-sessions" \
   tk="tmux kill-session -t" \
   tkk="tmux kill-server"
 
-# t  # Attaches tmux to the last session; creates a new session (with a panel split into left and right) if none exists.
-# tl # Lists all ongoing sessions
+# t - Attaches tmux to the last session; creates a new session (with a panel split into left and right) if none exists.
+# tl - Lists all ongoing sessions
 
 # NPM & Yarn
 alias \
@@ -267,8 +271,8 @@ alias \
   nr="npm run" \
   y=yarn
 
-# npmg # Lists globally installed npm packages
-# npml # Lists locally installed npm packages
+# npmg - Lists globally installed npm packages
+# npml - Lists locally installed npm packages
 
 # Security
 # ClamAV - Antivirus
@@ -278,6 +282,8 @@ alias \
   avupdate="sudo freshclam"
 
 # Misc.
+alias td="nvim ~/.todo"
+alias wtd="less ~/.todo"
 alias FUCK=fuck # For Mondays!
 alias fk=fuck
 
