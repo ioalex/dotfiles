@@ -13,13 +13,13 @@ fi
 # Source: <https://superuser.com/questions/243914/what-is-the-difference-between-xresources-and-xdefaults>
 
 if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources" ]; then
-   xrdb -merge -I"$XDG_CONFIG_HOME/x11" "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources"
+  xrdb -merge -I"$XDG_CONFIG_HOME/x11" "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources"
 elif [ -f "$HOME/.Xresources" ]; then
-   xrdb -merge -I"$HOME" "$HOME/.Xresources"
+  xrdb -merge -I"$HOME" "$HOME/.Xresources"
 elif [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xdefaults" ]; then
-   xrdb -merge -I"$XDG_CONFIG_HOME/x11" "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xdefaults"
+  xrdb -merge -I"$XDG_CONFIG_HOME/x11" "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xdefaults"
 elif [ -f "$HOME/.Xdefaults" ]; then
-   xrdb -merge -I"$HOME" "$HOME/.Xdefaults"
+  xrdb -merge -I"$HOME" "$HOME/.Xdefaults"
 fi
 
 xrandr@archbtw &  	# setup multi-head displays
