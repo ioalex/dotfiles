@@ -22,3 +22,6 @@
 [submodule "kitty/.config/kitty/themes/gruvbox"]
 	path = kitty/.config/kitty/themes/gruvbox
 	url = https://github.com/wdomitrz/kitty-gruvbox-theme
+[submodule "nano/.config/nano/syntax"]
+	path = nano/.config/nano/syntax
+	url = https://github.com/scopatz/nanorc.git
