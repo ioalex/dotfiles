@@ -2,14 +2,14 @@
 
 ```text
 ~
-└── .config/shell
-    ├── functions/*               Miscellaneous functions
-    ├── alias-distro              Linux distro-specific aliases
-    ├── alias-os                  OS-specific aliases
-    ├── aliasrc                   General aliases
-    ├── exports.env               Global environment variables
-    ├── path.env                  Sets $PATH
-    └── secrets.env               Global environment variables, not available to the public
+└── 📂 .config/shell
+    ├── 📂 functions/*               Miscellaneous functions
+    ├── ⚙️ alias-distro              Linux distro-specific aliases
+    ├── ⚙️ alias-os                  OS-specific aliases
+    ├── ⚙️ aliasrc                   General aliases
+    ├── ⚙️ exports.env               Global environment variables
+    ├── ⚙️ path.env                  Sets $PATH
+    └── ❔ secrets.env               Global environment variables, not available to the public
 
 ```
 

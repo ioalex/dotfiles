@@ -1,8 +1,8 @@
 # [`Stow`](https://www.gnu.org/software/stow/)
 
     ~
-    ├── .stow-global-ignore     Ignore files based on F-dotfiles filenaming scheme
-    └── .stowrc                 Set $HOME as default target dir
+    ├── 📄 .stow-global-ignore     Ignore files based on F-dotfiles filenaming scheme
+    └── ⚙️ .stowrc                 Set $HOME as default target dir
 
 ## Install notes
 

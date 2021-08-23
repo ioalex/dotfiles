@@ -2,7 +2,7 @@
 
 ```text
 ~
-└── .rvmrc                        rvm main configuration file
+└── ⚙️ .rvmrc                        rvm main configuration file
 
 ```
 

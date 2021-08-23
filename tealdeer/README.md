@@ -2,8 +2,8 @@
 
 ```text
 ~
-└── .config/tealdeer
-    └── config.toml               tealdeer config. file
+└── 📂 .config/tealdeer
+    └── ⚙️ config.toml               tealdeer config. file
 
 ```
 

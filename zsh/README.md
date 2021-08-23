@@ -2,18 +2,18 @@
 
 ```text
 ~
-├── .config/zsh/
-│   ├── .zsh/
-│   │   ├── completions/*         Contains various completion files
-│   │   ├── misc/*                Contains miscellaneous .zsh files; eg. fzf, zinit config
-│   │   ├── completions.zsh       User settings for completion in zsh
-│   │   ├── config.zsh            Sets default zsh options for interactive shell
-│   │   ├── history.zsh           Sets user sane history defaults
-│   │   ├── key-bindings.zsh      Sets user default keybindings
-│   │   └── prompt                Sets a fallback prompt; loads POWERLEVEL10K
-│   ├── .p10k.zsh                 POWERLEVEL10K zsh theme config
-│   └── .zshrc                    Routine loading all .zsh files; loads plugins via Zinit
-└── .zshenv                       Sets environment variables for all users
+├── 📂 .config/zsh/
+│   ├── 📂 .zsh/
+│   │   ├── 📂 completions/*         Contains various completion files
+│   │   ├── 📂 misc/*                Contains miscellaneous .zsh files; eg. fzf, zinit config
+│   │   ├── ⚙️ completions.zsh       User settings for completion in zsh
+│   │   ├── ⚙️ config.zsh            Sets default zsh options for interactive shell
+│   │   ├── ⚙️ history.zsh           Sets user sane history defaults
+│   │   ├── ⚙️ key-bindings.zsh      Sets user default keybindings
+│   │   └── ⚙️ prompt                Sets a fallback prompt; loads POWERLEVEL10K
+│   ├── ⚙️ .p10k.zsh                 POWERLEVEL10K zsh theme config
+│   └── ⚙️ .zshrc                    Routine loading all .zsh files; loads plugins via Zinit
+└── ⚙️ .zshenv                       Sets environment variables for all users
 ```
 
 This package uses [Zinit](https://github.com/zdharma/zinit), a flexible and fast zsh plugin manager which activates the [powerlevel10k](https://github.com/romkatv/powerlevel10k) theme. It loads aliases, functions and sets global environment variables from the `shell` package.

@@ -2,10 +2,10 @@
 
 ```text
 ~
-└── .config/ranger
-    ├── plugins/*                 Plugins directory
-    ├── rc.conf                   ranger main configuration file
-    └── ranger.sh                 ranger plugin installer
+└── 📂 .config/ranger
+    ├── 📂 plugins/                  Plugins directory
+    ├── ⚙️ rc.conf                   ranger main configuration file
+    └── 📜 ranger.sh                 ranger plugin installer
 
 ```
 

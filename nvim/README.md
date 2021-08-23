@@ -2,30 +2,30 @@
 
 ```text
 ~
-└── .config/nvim/
-    ├── .github/
-    │   ├── assets/               README assets
-    │   ├── workflows/            GitHub Actions workflow settings
-    │   └── CODEOWNERS            CODEOWNERS file
-    ├── lua/                      Lua modules
-    │   ├── lsp/                  Neovim LSP / LSP-plugin configuration
-    │   ├── plugins/              Plugin-specific configuration
-    │   ├── auto-install.lua      packer.nvim auto-install script
-    │   ├── hosts.lua             Manage Neovim program hosts
-    │   ├── mappings.lua          Neovim keybindings
-    │   ├── options.lua           Neovim settings
-    │   ├── plugins.lua           Plugins load file
-    │   └── theme.lua             Neovim colourscheme settings
-    ├── plugin/*                  packer.nvim plugin compilation
-    ├── spell/*                   Neovim spell directory
-    ├── undo                      Neovim undo directory
-    ├── .gitignore                git ignore file
-    ├── .luacheckrc               luacheck configuration file
-    ├── .markdownlint.json        Markdownlint configuration file
-    ├── .styluaignore             StyLua ignore file
-    ├── init.lua                  Neovim Lua initialisation file
-    ├── nvim.todo                 To-do file
-    └── stylua.toml               StyLua configuration file
+└── 📂 .config/nvim/
+    ├── 📂 .github/                  GitHub directory
+    │   ├── 📂 assets/               README assets
+    │   ├── 📂 workflows/            GitHub Actions workflow settings
+    │   └── 📄 CODEOWNERS            CODEOWNERS file
+    ├── 📂 lua/                      Lua modules
+    │   ├── 📂 lsp/                  Neovim LSP / LSP-plugin configuration
+    │   ├── 📂 plugins/              Plugin-specific configuration
+    │   ├── ⚙️ auto-install.lua      packer.nvim auto-install script
+    │   ├── ⚙️ hosts.lua             Manage Neovim program hosts
+    │   ├── ⚙️ mappings.lua          Neovim keybindings
+    │   ├── ⚙️ options.lua           Neovim settings
+    │   ├── ⚙️ plugins.lua           Plugins load file
+    │   └── ⚙️ theme.lua             Neovim colourscheme settings
+    ├── 📂 plugin/                   packer.nvim plugin compilation
+    ├── 📂 spell/                    Neovim spell directory
+    ├── 📂 undo/                     Neovim undo directory
+    ├── 📄 .gitignore                git ignore file
+    ├── 📄 .luacheckrc               luacheck configuration file
+    ├── 📄 .markdownlint.json        Markdownlint configuration file
+    ├── 📄 .styluaignore             StyLua ignore file
+    ├── ⚙️ init.lua                  Neovim Lua initialisation file
+    ├── 📄 nvim.todo                 To-do file
+    └── 📄 stylua.toml               StyLua configuration file
 
 ```
 

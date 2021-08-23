@@ -2,8 +2,8 @@
 
 ```text
 ~
-└── .config
-    └── tokei.toml                tokei config. file
+└── 📂 .config
+    └── ⚙️ tokei.toml                tokei config. file
 
 ```
 

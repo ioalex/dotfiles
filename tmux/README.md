@@ -2,10 +2,10 @@
 
 ```text
 ~
-└── .config/tmux
-    ├── plugins/*                 Plugins managed by tpm
-    ├── tmux.conf                 tmux config.
-    └── tpm.sh                    tpm installer
+└── 📂 .config/tmux
+    ├── 📂 plugins/*                 Plugins managed by tpm
+    ├── ⚙️ tmux.conf                 tmux config.
+    └── 📄 tpm.sh                    tpm installer
 
 ```
 

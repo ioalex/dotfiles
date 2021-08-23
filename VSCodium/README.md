@@ -2,9 +2,9 @@
 
 ```text
 ~
-└── .config/VSCodium/User
-    ├── keybindings.json          VSCodium keybindings config.
-    └── settings.json             VSCodium config.
+└── 📂 .config/VSCodium/User
+    ├── ⚙️ keybindings.json          VSCodium keybindings config.
+    └── ⚙️ settings.json             VSCodium config.
 
 ```
 

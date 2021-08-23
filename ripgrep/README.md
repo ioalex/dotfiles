@@ -2,8 +2,8 @@
 
 ```text
 ~
-└── .config/ripgrep
-    └── ripgreprc                 ripgrep main configuration file
+└── 📂 .config/ripgrep
+    └── ⚙️ ripgreprc                 ripgrep main configuration file
 
 ```
 

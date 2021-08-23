@@ -2,9 +2,9 @@
 
 ```text
 ~
-└── Pictures/Wallpapers
-    ├── 3840x1080/*               3840x1080 resolution multi-head wallpapers
-    └── *.{png,jpg,jpeg}          Wallpapers
+└── 📂 Pictures/Wallpapers
+    ├── 📂 3840x1080/*               3840x1080 resolution multi-head wallpapers
+    └── 🖼️ *.{png,jpg,jpeg}          Wallpapers
 
 ```
 
