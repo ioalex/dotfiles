@@ -5,7 +5,7 @@
 super + Return
   $TERMINAL
 
-super + f
+alt + Return
   $TERMINAL -e $FILE_MANAGER -Hdex
 
 super + e
@@ -140,7 +140,7 @@ super + q
   i3-msg split toggle
 
 # toggle fullscreen mode for the focused container
-super + shift + f
+super + f
   i3-msg fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
