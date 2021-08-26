@@ -5,7 +5,11 @@
 # Search digital garden and open it in Neovim
 vn() {
   local garden
-  garden=$(fd . "$GARDEN" | fzf)
+  if command -v bat &> /dev/null; then
+    garden=$(fd . "$GARDEN" | fzf --preview='bat --color=always --style=plain {}')
+  else
+    garden=$(fd . "$GARDEN" | fzf )
+  fi
   if [[ -n $garden ]]
   then
     nvim $garden
